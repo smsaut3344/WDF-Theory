@@ -27,11 +27,9 @@
             overflow: hidden;
         }
         
-        /* 语言控制核心 CSS */
         body.lang-en .zh { display: none !important; }
         body.lang-zh .en { display: none !important; }
 
-        /* 左侧目录栏 */
         .sidebar {
             width: 280px;
             background-color: var(--sidebar-bg);
@@ -39,6 +37,7 @@
             padding: 20px 0;
             display: flex;
             flex-direction: column;
+            overflow-y: auto;
         }
         .sidebar h2 {
             text-align: center;
@@ -66,7 +65,7 @@
             font-weight: bold;
         }
         .lang-switch {
-            margin-top: auto;
+            margin-top: 20px;
             margin-bottom: 20px;
             padding: 10px 25px;
             text-align: center;
@@ -82,17 +81,18 @@
         }
         .lang-switch button:hover { border-color: var(--accent-color); color: #fff; }
 
-        /* 右侧内容区 */
         .content {
             flex: 1;
             padding: 40px 80px;
             overflow-y: auto;
             line-height: 1.8;
+            position: relative;
         }
-        .page { display: none; animation: fadeIn 0.4s ease-in-out; }
-        .page.active { display: block; }
-        h1, h2, h3 { color: #fff; margin-top: 1.5em; }
-        h1 { border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
+        
+        /* 内部动态加载的样式补丁 */
+        #dynamic-content .page { animation: fadeIn 0.4s ease-in-out; padding-bottom: 120px;}
+        #dynamic-content h1, #dynamic-content h2, #dynamic-content h3 { color: #fff; margin-top: 1.5em; }
+        #dynamic-content h1 { border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
         .highlight-box {
             background-color: #1f2428;
             border-left: 4px solid var(--accent-color);
@@ -100,10 +100,7 @@
             margin: 20px 0;
             border-radius: 0 4px 4px 0;
         }
-        code { background-color: #2b3138; padding: 2px 5px; border-radius: 3px; color: #79c0ff; }
-        pre { background-color: #161b22; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid var(--border-color); }
         
-        /* 交互式终端样式 */
         .run-btn {
             background-color: #238636;
             color: white;
@@ -129,6 +126,20 @@
             white-space: pre-wrap;
         }
 
+        .footer-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 80px;
+            box-sizing: border-box;
+            background-color: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+
         @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
@@ -136,16 +147,19 @@
 
     <div class="sidebar">
         <h2>LACR Engine</h2>
-        <button class="nav-btn active" onclick="showPage('home')">
-            <span class="zh">📚 概述与前瞻预测</span><span class="en">📚 Overview & Predictions</span>
+        <button class="nav-btn active" onclick="loadModule('home.html', this)">
+            <span class="zh">📚 核心理念与战绩</span><span class="en">📚 Core & Results</span>
         </button>
-        <button class="nav-btn" onclick="showPage('paper')">
-            <span class="zh">📄 学术手稿 (核心方程)</span><span class="en">📄 Action Principle</span>
+        <button class="nav-btn" onclick="loadModule('paper.html', this)">
+            <span class="zh">📄 广义协变场论</span><span class="en">📄 Covariant Field Theory</span>
         </button>
-        <button class="nav-btn" onclick="showPage('math')">
+        <button class="nav-btn" onclick="loadModule('math.html', this)">
             <span class="zh">📐 数学与群论推导</span><span class="en">📐 Group Theory & Math</span>
         </button>
-        <button class="nav-btn" onclick="showPage('pipeline')">
+        <button class="nav-btn" onclick="loadModule('predictions.html', this)">
+            <span class="zh">🔭 刚性前瞻预言</span><span class="en">🔭 Rigorous Predictions</span>
+        </button>
+        <button class="nav-btn" onclick="showLocalPipeline(this)">
             <span class="zh">⚙️ 在线 Python 盲测</span><span class="en">⚙️ Live Python Pipeline</span>
         </button>
         
@@ -156,140 +170,14 @@
 
     <div class="content">
         
-        <div id="home" class="page active">
-            <h1>
-                <span class="zh">时空流形的数据重整化 (LACR)</span>
-                <span class="en">Data Renormalization of Spacetime Manifold (LACR)</span>
-            </h1>
-            <p class="zh">欢迎来到 <strong>Lattice-Based Information Conformal Repulsion (LACR)</strong> 开源物理项目。本系统旨在通过底层离散拓扑常数，解决现代天体物理学中面临的尺度分裂与暗物质危机。这不仅是一个拟合模型，而是一个具备刚性预测能力的有效场论。</p>
-            <p class="en">Welcome to the <strong>Lattice-Based Information Conformal Repulsion (LACR)</strong> open-source physics project. This system solves the scale divergence and dark matter crisis through underlying discrete topological constants. It is not merely a fitting model, but an effective field theory with rigid predictive power.</p>
-            
-            <h2>
-                <span class="zh">🎯 完美解释主流模型的三大天坑</span>
-                <span class="en">🎯 Resolving the Flaws of Mainstream Models</span>
-            </h2>
-            
-            <div class="highlight-box">
-                <strong class="zh">1. 核心杀手锏：SPARC 星系库的“零调参”通杀</strong>
-                <strong class="en">1. Zero-Tuning Fit for SPARC Galaxies</strong><br>
-                <span class="zh">面对 SPARC 数据库里上百个形态各异的星系，主流 $\Lambda$CDM 模型必须“一星一调”，为每个星系手工设定单独的暗物质晕参数。LACR 理论无需任何单体参数，依靠 4 阶几何骨架 $(1 + x^{-2})^{0.25}$ 与绝对边界 $a_0$，实现了全库通杀，且平均残差低于主流基准。</span>
-                <span class="en">Unlike the $\Lambda$CDM model which requires fine-tuning individual dark matter halo parameters for each galaxy, LACR requires ZERO per-object parameters. Using a 4th-order geometric skeleton $(1 + x^{-2})^{0.25}$, it perfectly fits the entire SPARC database with lower average residuals than mainstream baselines.</span>
-            </div>
-            
-            <div class="highlight-box">
-                <strong class="zh">2. 强引力区与弱引力区的“自动隐身”切换</strong>
-                <strong class="en">2. Automatic "Stealth Mode" in Strong Gravity</strong><br>
-                <span class="zh">传统修改引力理论（如早期的 MOND）在放大星系外围弱引力的同时，往往会破坏太阳系内的强引力精度。LACR 理论凭借格拉斯曼非重叠协议，在强场区（高曲率区域）自发切断多余自由度，完美退化回广义相对论，实现了极其自然的尺度穿越。</span>
-                <span class="en">Traditional modified gravity theories often disrupt precision within the solar system. The LACR theory, leveraging the Grassmann non-overlapping protocol, spontaneously truncates extra degrees of freedom in strong fields, seamlessly reducing to General Relativity and preserving solar system dynamics.</span>
-            </div>
-            
-            <div class="highlight-box">
-                <strong class="zh">3. 星团碰撞中的质量分离相变</strong>
-                <strong class="en">3. Mass Separation in Cluster Collisions</strong><br>
-                <span class="zh">主流模型无法自洽解释 Bullet Cluster（质量与气体分离）与 Abell 520（质量与气体重合）的矛盾。LACR 证明，这实质上是空间曲率在极端各向异性（秩序激活，分离）或极度拥堵（无序归并，重合）下的几何相变。</span>
-                <span class="en">Mainstream models fail to self-consistently explain the contradiction between the Bullet Cluster and Abell 520. LACR proves this is essentially a geometric phase transition of spatial curvature under extreme anisotropy (separation) or extreme congestion (merging).</span>
-            </div>
+        <div id="dynamic-content"></div>
 
-            <h2>
-                <span class="zh">🚀 近期可观测的前瞻预测 (Predictions)</span>
-                <span class="en">🚀 Observable Predictions</span>
-            </h2>
-            <p class="zh">作为一个拒绝“和稀泥”的理论，本模型提出以下可通过近期巡天观测（如 JWST 和 CMB-S4）验证的明确物理现象：</p>
-            <p class="en">As a rigorous theory, this model proposes the following physical phenomena verifiable by near-term observations (e.g., JWST and CMB-S4):</p>
-            <ul>
-                <li><strong>CMB 极高频段 ($\ell > 703$) 的非线性几何压缩：</strong> 
-                    <span class="zh">由核心拓扑常数 $19 \times 37 = 703$ 刚性推导得出。下一代高精度 CMB 极化实验必将在此阈值处观测到明显的细微相位偏移（高频缓冲相移）。</span>
-                    <span class="en">Rigidly derived from the topological threshold $19 \times 37 = 703$. Next-generation CMB polarization experiments will observe a deterministic non-linear phase shift at this exact threshold.</span>
-                </li>
-                <li><strong>超高速偏心对撞星团的阶跃式坍塌：</strong> 
-                    <span class="zh">主流认为暗物质在碰撞中是渐进剥离的。LACR 预测，只要超高速星系团碰撞参数越过群论拓扑阈值，其引力透镜的有效放大效应将出现“阶跃式的断崖坍塌”。</span>
-                    <span class="en">Unlike the progressive stripping of dark matter, LACR predicts that when ultra-high-speed cluster collisions cross the topological threshold, their gravitational amplification effect will experience a "step-like cliff collapse".</span>
-                </li>
-                <li><strong>超弥散星系 (UDGs) 的反常引力缺失：</strong> 
-                    <span class="zh">如 NGC 1052-DF2 这类被认为“没有暗物质”的星系，在 LACR 理论中，这并非个例异常，而是因为极低密度导致局域几何秩未能激活，直接给出了其引力缺失的宏观代数解。</span>
-                    <span class="en">For galaxies like NGC 1052-DF2 ("galaxies without dark matter"), LACR proves this is not an anomaly. Their extremely low density fails to activate the local geometric rank, providing a direct macroscopic algebraic solution for their gravity deficit.</span>
-                </li>
-            </ul>
-        </div>
-
-        <div id="paper" class="page">
-            <h1>
-                <span class="zh">广义协变场论：LACR 上帝公式</span>
-                <span class="en">Covariant Field Theory: The Action Principle</span>
-            </h1>
-            
-            <h3>
-                <span class="zh">非极小共形耦合拉格朗日量</span>
-                <span class="en">Non-Minimal Conformal Coupled Lagrangian</span>
-            </h3>
-            <p class="zh">物理学家通常质疑，引力和电磁力在标准模型中是线性叠加（加法）的。但在 LACR 理论中，我们指出在时空离散底层，物理实体（拉格朗日量）通过维度增加实现了“乘法”耦合。本理论的终极拉格朗日量定义如下：</p>
-            <p class="en">While gravitational and electromagnetic forces linearly superpose in the standard model, LACR theory points out that at the discrete spacetime foundation, physical entities couple through "multiplication" corresponding to dimensional folding. The ultimate Lagrangian is defined as:</p>
-            
-            $$S_{LACR} = \int d^4x \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\partial_\mu \phi \partial^\mu \phi) \left[ 1 + (1 - \theta) \beta F_{\rho\sigma} F^{\rho\sigma} \right] + \theta \beta F_{\rho\sigma} F^{\rho\sigma} \right\rbrace$$
-            
-            <p class="zh">在此协变场论中：</p>
-            <ul class="zh">
-                <li><strong>$\phi$</strong>：宏观引力骨架（流形主标量场）。</li>
-                <li><strong>$e^{-\alpha \chi^2}$</strong>：调制弱力本征态门控（维度折叠的注意力机制映射）。</li>
-                <li><strong>$F_{\rho\sigma} F^{\rho\sigma}$</strong>：高频非线性电磁修正项。</li>
-                <li><strong>$\alpha$ 与 $\beta$</strong>：空间拓扑锁死的常数 19 与 37。</li>
-            </ul>
-            <p class="en">In this covariant field theory:</p>
-            <ul class="en">
-                <li><strong>$\phi$</strong>: Macroscopic gravitational skeleton (main scalar field).</li>
-                <li><strong>$e^{-\alpha \chi^2}$</strong>: Modulates weak force eigenstate gating (mapping of dimensional folding).</li>
-                <li><strong>$F_{\rho\sigma} F^{\rho\sigma}$</strong>: High-frequency non-linear electromagnetic correction.</li>
-                <li><strong>$\alpha$ and $\beta$</strong>: Topologically locked constants of 19 and 37.</li>
-            </ul>
-        </div>
-
-        <div id="math" class="page">
-            <h1>
-                <span class="zh">拓扑不变量与群论推导</span>
-                <span class="en">Topological Invariants & Group Theory</span>
-            </h1>
-            
-            <h2>
-                <span class="zh">1. $O_h$ 48阶群与对称性破缺 ($c_1$ 与 $c_2$)</span>
-                <span class="en">1. $O_h$ Order-48 Group & Symmetry Breaking</span>
-            </h2>
-            <p class="zh">物理学家极度痴迷于“对称性”。底层离散像素网格满足最高各向同性对称性的全正八面体群（$O_h$），其阶数为 48。当物质场介入导致自旋或宇称破缺时，系统有效自由度减半为 24。由此推导出宇宙的秩序激活群论不变量：</p>
-            <p class="en">The underlying discrete pixel grid satisfies the full octahedral group ($O_h$) with the highest isotropy, having an order of 48. When matter fields cause spin or parity symmetry breaking, the effective degrees of freedom halve to 24. This derives the cosmic invariant for order activation:</p>
-            
-            $$c_1 = \frac{1}{24\sqrt{2}} \quad , \quad c_2 = \frac{1}{12\sqrt{2}}$$
-            <p class="zh">这把 $c_1$ 从一个算力数字，直接升华成了“时空流形对称性破缺”的群论刚性不变量。</p>
-            
-            <h2>
-                <span class="zh">2. 拓扑闭包：扼流(19)与增益(37)</span>
-                <span class="en">2. Topological Closure: Choke (19) and Boost (37)</span>
-            </h2>
-            <p class="zh">在二维全息边界的离散正六边形点阵（$A_2$ Lattice）中，因果视界半径 $r$ 内的节点总数为 $N(r) = 3r^2 + 3r + 1$。</p>
-            <p class="en">In the discrete hexagonal lattice ($A_2$) on the 2D holographic boundary, nodes within radius $r$ total $N(r) = 3r^2 + 3r + 1$.</p>
-            <ul>
-                <li><strong class="zh">四阶阻尼极值 (19)：</strong><span class="zh">四阶双调和算子 $\nabla^4 \phi$ 必须延伸至边界 $r=2$，此时绝对节点数为 19。少于此数矩阵不满秩。</span></li>
-                <li><strong class="zh">一阶张量广播 (37)：</strong><span class="zh">电磁信息扩散向外扩增光速单位 $\Delta r = 1$。其视界半径 $r=3$，包含严格等于 37 个节点。</span></li>
-            </ul>
-
-            <h2>
-                <span class="zh">3. 格拉斯曼幂零律与奇点免疫</span>
-                <span class="en">3. Grassmann Nilpotent Law & Singularity Immunity</span>
-            </h2>
-            <p class="zh">为了死守“一个坑位绝不记两笔账”的格拉斯曼非重叠协议，遵循费米子泡利不相容 $\theta^2 = 0$，推导出了防冲突饱和舱门算子：</p>
-            <p class="en">Following the Fermionic Pauli exclusion $\theta^2 = 0$ to strictly enforce the Grassmann non-overlapping protocol, the anti-collision saturation operator is derived:</p>
-            
-            $$W_{local} = \frac{g_{gas}}{a_0 + g_{gas}}$$
-            
-            <p class="zh"><strong>物理意义：</strong> 黑洞中心的“无限密度”是广义相对论的死穴。由于该算子的存在，物理标度无论在极端高能态下有多大，度规极限都被死死卡在 1.0。这从底层数学上直接扼杀了奇点暴涨的可能性。</p>
-            <p class="en"><strong>Physical Significance:</strong> The "infinite density" at a black hole center is the fatal flaw of GR. This operator ensures that under extreme high-energy states, the metric limit is strictly capped at 1.0, mathematically eliminating the possibility of singularities.</p>
-        </div>
-
-     <div id="pipeline" class="page">
+        <div id="pipeline-content" class="page" style="display:none; padding-bottom: 120px;">
             <h1>
                 <span class="zh">LACR 自动化在线盲测管线</span>
                 <span class="en">LACR Live Blind-Test Pipeline</span>
             </h1>
-            <p class="zh">科学的真理在于可复现。LACR 引擎已固化所有拓扑常数，<strong>不提供任何人工调参接口</strong>。您可以在下方输入任意星系或星团的实测数据，让您的浏览器实时执行纯正的 Python 物理内核代码，验证理论残差。</p>
-            <p class="en">The truth of science lies in reproducibility. The LACR engine has solidified all topological constants and <strong>provides no manual tuning interfaces</strong>. Enter empirical data below to execute the Python physics kernel locally in your browser and verify the residuals.</p>
+            <p class="zh">科学的真理在于可复现。LACR 引擎已固化所有拓扑常数，<strong>不提供任何人工调参接口</strong>。</p>
             
             <div style="background-color: #161b22; border: 1px solid var(--border-color); padding: 20px; border-radius: 8px; margin-top: 20px;">
                 <h3 style="margin-top: 0; color: var(--accent-color);">1. 星系宏观尺度测试 (SPARC RAR)</h3>
@@ -322,7 +210,7 @@ Awaiting user input...
             </div>
         </div>
 
-        <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color); text-align: center; color: #8b949e; font-size: 0.9em;">
+        <div class="footer-box">
             <p>
                 <span class="zh">© 2026 Andy(文大方) - LACR Theory. 保留所有权利。</span>
                 <span class="en">© 2026 Andy(Wen Dafang) - LACR Theory. All Rights Reserved.</span>
@@ -359,19 +247,17 @@ engine = LACREngine()
 def test_sparc(*args, **kwargs):
     term = document.getElementById("output-terminal")
     try:
-        # 从网页获取用户输入的值
-        g_bar_str = document.getElementById("input-gbar").value
-        g_bar_test = float(g_bar_str)
+        g_bar_test = float(document.getElementById("input-gbar").value)
         pred = engine.sparc_limit(g_bar_test)
         
         out = f"================ SPARC 星系测试 ================\n"
         out += f"[执行引擎] 拓扑骨架 (a0=10^-9.92) 锁定。\n"
-        out += f"-> 观测输入 (重子引力 g_bar): {g_bar_test:.2e} m/s^2\n"
-        out += f"-> LACR 理论推演值 (g_obs):   {pred:.2e} m/s^2\n"
+        out += f"-> 观测输入: {g_bar_test:.2e} m/s^2\n"
+        out += f"-> LACR 预测: {pred:.2e} m/s^2\n"
         out += f"-> 状态: 计算完成，无需暗物质参数介入。\n"
         term.innerText = out
     except Exception as e:
-        term.innerText = f"[Error] 格式错误，请输入有效的科学计数法数字，例如 1.2e-11\n{str(e)}"
+        term.innerText = f"[Error] {str(e)}"
 
 def test_cluster(*args, **kwargs):
     term = document.getElementById("output-terminal")
@@ -382,12 +268,11 @@ def test_cluster(*args, **kwargs):
         
         out = f"================ 巨型星系团碰撞测试 ================\n"
         out += f"[执行引擎] 拓扑常数 (c1={engine.c1:.5f}, c2={engine.c2:.5f}) 锁定。\n"
-        out += f"-> 输入各向异性: {vector:.4f} | 气体拥堵: {congestion:.4f}\n"
-        out += f"-> LACR 纯几何引力放大倍率: {weight:.4f} 倍\n"
-        out += f"-> 结论: 表观质量重分配由曲率相变引致，摒弃假想粒子假说。\n"
+        out += f"-> 纯几何引力放大倍率: {weight:.4f} 倍\n"
+        out += f"-> 结论: 表观质量重分配由曲率相变引致。\n"
         term.innerText = out
     except Exception as e:
-        term.innerText = f"[Error] 请输入有效数字。\n{str(e)}"
+        term.innerText = f"[Error] {str(e)}"
     </py-script>
 
     <script>
@@ -398,20 +283,64 @@ def test_cluster(*args, **kwargs):
             } else {
                 setLanguage('en');
             }
+            // 初始加载第一页
+            loadModule('home.html', document.querySelector('.nav-btn.active'));
         });
 
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            event.currentTarget.classList.add('active');
-            if (window.MathJax) { MathJax.typesetPromise(); }
+        function setActiveButton(btn) {
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // 核心动态拉取方法 (Fetch API)
+        function loadModule(filename, btn) {
+            setActiveButton(btn);
+            document.getElementById('pipeline-content').style.display = 'none';
+            const dynamicContainer = document.getElementById('dynamic-content');
+            
+            fetch(filename)
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.text();
+                })
+                .then(html => {
+                    dynamicContainer.innerHTML = html;
+                    dynamicContainer.style.display = 'block';
+                    // 重新执行隐藏英文/中文逻辑
+                    if (document.body.classList.contains('lang-en')) {
+                        dynamicContainer.querySelectorAll('.zh').forEach(el => el.style.setProperty('display', 'none', 'important'));
+                    } else {
+                        dynamicContainer.querySelectorAll('.en').forEach(el => el.style.setProperty('display', 'none', 'important'));
+                    }
+                    // 通知 MathJax 重新渲染新拉取进来的数学公式
+                    if (window.MathJax) { MathJax.typesetPromise(); }
+                })
+                .catch(error => {
+                    dynamicContainer.innerHTML = `<h2 style="color:red">Loading Error: Please push the files to GitHub Pages. Fetch API cannot run purely locally without a server.</h2>`;
+                });
+        }
+
+        function showLocalPipeline(btn) {
+            setActiveButton(btn);
+            document.getElementById('dynamic-content').style.display = 'none';
+            document.getElementById('pipeline-content').style.display = 'block';
         }
 
         function setLanguage(lang) {
             const body = document.body;
             body.classList.remove('lang-zh', 'lang-en');
             body.classList.add('lang-' + lang);
+            
+            // 手动触发当前动态容器内元素的隐藏，因为 CSS 规则有时候对后塞入的 HTML 刷新有延迟
+            const dynamicContainer = document.getElementById('dynamic-content');
+            if(dynamicContainer) {
+                dynamicContainer.querySelectorAll('.zh, .en').forEach(el => el.style.display = ''); // reset
+                if(lang === 'en') {
+                    dynamicContainer.querySelectorAll('.zh').forEach(el => el.style.setProperty('display', 'none', 'important'));
+                } else {
+                    dynamicContainer.querySelectorAll('.en').forEach(el => el.style.setProperty('display', 'none', 'important'));
+                }
+            }
         }
 
         function toggleLanguage() {
