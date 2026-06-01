@@ -11,21 +11,21 @@
     <p class="zh">物理学家通常质疑，引力和电磁力在标准模型中是线性叠加（加法）的。但在 LACR 理论中，我们指出在时空离散底层，物理实体（拉格朗日量）通过维度增加实现了“乘法”耦合。本理论的终极拉格朗日量定义如下：</p>
     <p class="en">While gravitational and electromagnetic forces linearly superpose in the standard model, LACR theory points out that at the discrete spacetime foundation, physical entities couple through "multiplication" corresponding to dimensional folding. The ultimate Lagrangian is defined as:</p>
     
-    $$S_{LACR} = \int d^4x \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\partial_\mu \phi \partial^\mu \phi) \left[ 1 + (1 - \theta) \beta F_{\rho\sigma} F^{\rho\sigma} \right] + \theta \beta F_{\rho\sigma} F^{\rho\sigma} \right\rbrace$$
+    $$S_{LACR} = \sum_{\mathbb{K}} \to \int \frac{d^4x}{\pi^2} \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\partial_\mu \phi \partial^\mu \phi) \left[ 1 + (1 - \theta) \beta F_{\rho\sigma} F^{\rho\sigma} \right] + \theta \beta F_{\rho\sigma} F^{\rho\sigma} \right\rbrace$$
     
-    <p class="zh">在此协变场论中：</p>
+    <p class="zh">在此协变场论中，各符号具备严格的信息论与量纲映射：</p>
     <ul class="zh">
-        <li><strong>$\phi$</strong>：宏观引力骨架（流形主标量场）。</li>
-        <li><strong>$e^{-\alpha \chi^2}$</strong>：调制弱力本征态门控（维度折叠的注意力机制映射）。</li>
-        <li><strong>$F_{\rho\sigma} F^{\rho\sigma}$</strong>：高频非线性电磁修正项。</li>
-        <li><strong>$\alpha$ 与 $\beta$</strong>：空间拓扑锁死的常数 19 与 37。</li>
+        <li style="margin-bottom: 8px;"><strong>$\phi$ 与 $F_{\rho\sigma}$</strong>：$\phi$ 为主标量场（承载基础引力骨架），$F_{\rho\sigma}$ 为高频规范场张量（承载电磁、强、弱三力）。</li>
+        <li style="margin-bottom: 8px;"><strong>$\chi$（局域信息通量比）</strong>：定义为流形渲染的瞬时带宽占比（映射宏观速度 $v/c$）。此项无量纲，保证了指数运算的绝对严密。</li>
+        <li style="margin-bottom: 8px;"><strong>$e^{-\alpha \chi^2}$（渐近解耦门控）</strong>：当载体逼近或超越光速极限（$\chi \to \infty$），该门控暴跌至 0，导致高频的三力（$F_{\rho\sigma}$）代数湮灭被强行丢包，仅保留引力骨架。</li>
+        <li style="margin-bottom: 8px;"><strong>$\partial_\mu \phi \partial^\mu \phi$（算力点火梯度）</strong>：波函数坍缩本质上是载体从全网格概率弥散态收缩至单点。坍缩瞬间导致局域密度梯度 $\partial_\mu \phi$ 呈狄拉克 $\delta$ 函数级暴涨，该算力势能强行解压并点燃了后续的三大高频力。</li>
+        <li><strong>$\pi^2$ 与积分测度</strong>：将离散点阵 $\sum_{\mathbb{K}}$ 转化为连续流形 $\int d^4x$ 时，几何边界必然产生不可通约的同调破缺误差。$\pi$ 因子作为离散逼近完美 $SO(3)$ 旋转对称性时的拓扑补偿测度，保证了全局拉格朗日量的数学等价性。</li>
     </ul>
-    <p class="en">In this covariant field theory:</p>
+    <p class="en">In this covariant field theory, each symbol possesses strict information-theoretic and dimensional mappings:</p>
     <ul class="en">
-        <li><strong>$\phi$</strong>: Macroscopic gravitational skeleton (main scalar field).</li>
-        <li><strong>$e^{-\alpha \chi^2}$</strong>: Modulates weak force eigenstate gating (mapping of dimensional folding).</li>
-        <li><strong>$F_{\rho\sigma} F^{\rho\sigma}$</strong>: High-frequency non-linear electromagnetic correction.</li>
-        <li><strong>$\alpha$ and $\beta$</strong>: Topologically locked constants of 19 and 37.</li>
+        <li><strong>$\chi$ (Local Information Flux Ratio):</strong> Dimensionless proxy for render bandwidth (macroscopic $v/c$). As $v \to c$ ($\chi \to \infty$), the asymptotic decoupling gate $e^{-\alpha \chi^2} \to 0$, forcing the algebraic annihilation (packet drop) of the three high-frequency gauge forces ($F_{\rho\sigma}$), leaving only the gravity skeleton.</li>
+        <li><strong>$\partial_\mu \phi \partial^\mu \phi$ (Computational Ignition Gradient):</strong> Quantum collapse forces a smeared probability state into a discrete node, causing this density gradient to spike as a Dirac delta function. This spike provides the computational energy to decompress and ignite the high-frequency forces.</li>
+        <li><strong>Integration Measure $\pi$:</strong> The transition from discrete lattice $\sum$ to continuous manifold $\int d^4x$ necessitates $\pi$ as the topological compensation factor for homology breaking, guaranteeing exact mathematical equivalence.</li>
     </ul>
 
     <h3 style="margin-top: 40px;">
@@ -67,12 +67,12 @@
     <p class="en">Traditional theories view the four fundamental forces as independent entities. LACR unified them as "information bandwidth and refresh protocols of the discrete grid."</p>
 
     <ul class="zh">
-        <li style="margin-bottom: 10px;"><strong>超光速的带宽截断 (Superluminal Bandwidth Truncation)：</strong> 光速 $c$ 为时空网格的极限渲染帧率。当信息载体超越此速率阈值时，网格引发“局域带宽过载”，高频的三大规范场（电磁力、强力、弱力）被强制丢包剥离。系统只能维持并广播最基础的拓扑骨架，即<strong>引力信息</strong>。</li>
-        <li style="margin-bottom: 10px;"><strong>波函数坍缩的算力满载 (Quantum Collapse Rendering)：</strong> 量子波函数的坍缩，本质是信息载体从全局概率弥散态向单一离散节点强制锁相的过程。该定位过程夺取了局域全部网格算力，使得被封存的三大高频规范场获得全量带宽解压，实现四力的完整物理展现。</li>
-        <li><strong>几何常数 $\pi$ 的拓扑同调破缺：</strong> 力的剥离与获取，伴随着流形维度从离散向连续的跨越。在完美的 $SO(3)$ 连续对称极限中存在完美的圆（$2\pi r$），而在 $O_h$ 离散晶格中仅存在多边形逼近。常数 $\pi$ 正是刻画连续与离散转换时的“不可公度极限”。它作为绝对几何滤网，决定了四大基本力信息在解压与坍缩过程中的能级转换截断阀值。</li>
+        <li style="margin-bottom: 10px;"><strong>超光速的带宽截断 (Superluminal Bandwidth Truncation)：</strong> 光速 $c$ 为时空网格的极限渲染帧率。当信息载体超越此速率阈值时，网格引发“局域带宽过载”，高频的三大规范场（电磁力、强力、弱力）如上文公式所示发生“渐近解耦”，系统只能维持并广播最基础的拓扑骨架，即引力信息。</li>
+        <li style="margin-bottom: 10px;"><strong>波函数坍缩的算力满载 (Quantum Collapse Rendering)：</strong> 量子坍缩本质是信息载体向单一离散节点强制锁相的过程。该定位过程引发局域算力梯度 $\partial_\mu \phi$ 的极点暴涨，瞬间夺取局域全部网格算力，使得被封存的三大高频规范场获得全量带宽解压。</li>
+        <li><strong>几何常数 $\pi$ 的拓扑同调破缺：</strong> 力的剥离与获取伴随着流形维度从离散向连续的跨越。在宏观 $SO(3)$ 连续对称极限中存在完美的圆，而在 $O_h$ 离散晶格中仅存在逼近。常数 $\pi$ 正是刻画这种变换的“不可公度极限”，作为绝对几何滤网，决定了四大基本力信息在解压与坍缩过程中的截断阀值。</li>
     </ul>
     <ul class="en">
-        <li style="margin-bottom: 10px;"><strong>Superluminal Bandwidth Truncation:</strong> The speed of light $c$ is the grid's maximum render frame rate. Superluminal transition triggers "bandwidth overload," dropping high-frequency gauge fields (EM, Strong, Weak). The system only broadcasts the fundamental topological skeleton: <strong>Gravity</strong>.</li>
+        <li style="margin-bottom: 10px;"><strong>Superluminal Bandwidth Truncation:</strong> The speed of light $c$ is the grid's maximum render frame rate. Superluminal transition triggers "bandwidth overload," dropping high-frequency gauge fields (EM, Strong, Weak). The system only broadcasts the fundamental topological skeleton: Gravity.</li>
         <li style="margin-bottom: 10px;"><strong>Quantum Collapse Rendering:</strong> Quantum collapse is the process of an information carrier locking into a single discrete node, concentrating local computational power. This triggers full bandwidth decompression, rendering all four fundamental forces completely.</li>
         <li><strong>Topological Symmetry Breaking of $\pi$:</strong> The transition of forces involves crossing from discrete to continuous dimensions. $\pi$ serves as the geometric limit defining the topological homology breaking between the discrete $O_h$ lattice and continuous $SO(3)$ symmetry, acting as the absolute geometric filter during information decompression.</li>
     </ul>
