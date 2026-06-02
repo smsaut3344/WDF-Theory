@@ -107,7 +107,6 @@ class LACREngine:
 
 engine = LACREngine()
 
-# --- 真实深空观测档案库 ---
 galaxy_archives = {
     "ngc0289": {"gbar": "3.5e-12", "name_zh": "NGC0289 (预言靶点)", "name_en": "NGC0289 (Cliff Target)"},
     "ngc1052df2": {"gbar": "8.0e-13", "name_zh": "NGC 1052-DF2 (超弥散星系)", "name_en": "NGC 1052-DF2 (UDG)"},
@@ -214,7 +213,7 @@ def test_cluster(*args, **kwargs):
             out += f"-> Current collision state manifold features: Order activation vector = {vector:.2f} | Identical gas congestion = {congestion:.2f}\n"
             out += f"-> LACR Pure Geometric Gravity Amplification Ratio: {weight:.4f}x\n"
             out += f"-> Audit Conclusion: Apparent mass redistribution is induced by extreme curvature phase transitions, achieving causal closure.\n"
-        term.getElementById("output-terminal").innerText = out
+        term.innerText = out
     except Exception as e:
         if zh:
             term.innerText = f"[核心崩溃] 参数输入无效。详细信息: {str(e)}"
