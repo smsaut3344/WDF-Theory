@@ -348,7 +348,7 @@ def test_cluster(*args, **kwargs):
         else:
             term.innerText = f"[Core Crash] Invalid parameter input. Details: {str(e)}"
 
-# 🌉 跨语言底层调用总线桥接：向全局全局 window 对象注册接口 🌉
+# 🌉 跨语言底层调用总线桥接：向全局 window 对象注册接口 🌉
 window.py_load_galaxy_data = load_galaxy_data
 window.py_load_cluster_data = load_cluster_data
 window.py_test_sparc = test_sparc
