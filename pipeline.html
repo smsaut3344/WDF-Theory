@@ -23,7 +23,7 @@
                 <option value="ngc1052df2">NGC 1052-DF2 (<span class="zh">超弥散星系</span><span class="en">Ultra-Diffuse Galaxy</span>)</option>
                 <option value="milkyway">银河系尺度基准 (Milky Way Proxy)</option>
             </select>
-            <button onclick="window.py_load_galaxy_data()" class="run-btn" style="padding: 6px 12px; margin-left: 10px; font-size: 0.9em; background-color: #1f6feb;">
+            <button onclick="window.load_galaxy_data()" class="run-btn" style="padding: 6px 12px; margin-left: 10px; font-size: 0.9em; background-color: #1f6feb;">
                 <span class="zh">载入档案</span><span class="en">Load Archive</span>
             </button>
         </div>
@@ -34,7 +34,7 @@
                 <span class="en">Input Baryonic Gravity ($g_{bar}$):</span>
             </label>
             <input type="text" id="input-gbar" value="1.2e-11" style="background-color: #0d1117; color: #fff; border: 1px solid #30363d; padding: 8px; width: 120px;">
-            <button onclick="window.py_test_sparc()" class="run-btn" style="padding: 8px 16px; margin-left: 15px; font-size: 1em;">
+            <button onclick="window.test_sparc()" class="run-btn" style="padding: 8px 16px; margin-left: 15px; font-size: 1em;">
                 <span class="zh">▶ 执行内核审计</span><span class="en">▶ Execute Kernel Audit</span>
             </button>
         </div>
@@ -58,7 +58,7 @@
                 <option value="macs">MACS J0025 (<span class="zh">婴儿子弹团</span><span class="en">Baby Bullet</span>)</option>
                 <option value="pandora">Abell 2744 (<span class="zh">潘多拉连环撞</span><span class="en">Pandora Cluster</span>)</option>
             </select>
-            <button onclick="window.py_load_cluster_data()" class="run-btn" style="padding: 6px 12px; margin-left: 10px; font-size: 0.9em; background-color: #1f6feb;">
+            <button onclick="window.load_cluster_data()" class="run-btn" style="padding: 6px 12px; margin-left: 10px; font-size: 0.9em; background-color: #1f6feb;">
                 <span class="zh">提取参数</span><span class="en">Extract Parameters</span>
             </button>
         </div>
@@ -74,14 +74,14 @@
                 <span class="en">Gas Congestion:</span>
             </label>
             <input type="text" id="input-congestion" value="0.01" style="background-color: #0d1117; color: #fff; border: 1px solid #30363d; padding: 8px; width: 80px;">
-            <button onclick="window.py_test_cluster()" class="run-btn" style="padding: 8px 16px; margin-left: 15px; font-size: 1em;">
+            <button onclick="window.test_cluster()" class="run-btn" style="padding: 8px 16px; margin-left: 15px; font-size: 1em;">
                 <span class="zh">▶ 纯几何重分配映射</span><span class="en">▶ Geometric Redistribution Mapping</span>
             </button>
         </div>
     </div>
     
     <div id="output-terminal" class="terminal-box" style="margin-top: 25px;">
-[System Ready] LACR Covariant Field Theory Environment Loaded.
+[System Ready] LACR Pure JS Engine Loaded.
 Waiting for standard astronomical data input or archive extraction...
     </div>
 </div>
