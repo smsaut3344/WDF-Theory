@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Physics: Cosmology](https://img.shields.io/badge/Physics-Cosmology-red.svg)
 ![Status: Peer Review Ready](https://img.shields.io/badge/Status-Peer%20Review%20Ready-success.svg)
-[![DOI](https://zenodo.org/badge/1255705490.svg)]([https://doi.org/10.5281/zenodo.20488837](https://doi.org/10.5281/zenodo.20488837))
+[![DOI](https://zenodo.org/badge/1255705490.svg)](https://doi.org/10.5281/zenodo.20488837)
 
 > *"We do not need to invent invisible particles to balance the universe's ledger. The geometry of spacetime itself, when constrained by discrete topological invariants, enforces the balance."*
 > 
@@ -28,7 +28,7 @@ The WDF engine successfully closes the following observational deficits without 
 2. **Extreme Cluster Collisions (Cluster Scale):** Based on the symmetry-breaking constants $c_1$ and $c_2$ rigidly derived from the $O_h$ group, it accurately reproduces the anomalous mass redistribution in the Bullet Cluster (anisotropic separation) and Abell 520 (isotropic congestion) purely through geometric topological projection.
 3. **CMB High-Frequency Blind Test (Microscopic Scale):** When multipole moments cross discrete fractal mapping points (e.g., harmonics of $O_h=48$ and structural ratios like $\ell \sim 1836$), the engine physically triggers a high-frequency Phase Shift, successfully suppressing electromagnetic leakage and closing the acoustic peaks without perturbative fluid free variables.
 
-### ⚙️ The Action Principle (The "God Equation")
+### ⚙️ The Action Principle (Wen Dafang's Equation)
 All code logic in this pipeline is strictly varied from the following non-linear conformal coupled Lagrangian action:
 
 $$S_{WDF} = \int \frac{d^4x}{\pi^2} \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\partial_\mu \phi \partial^\mu \phi) \left[ 1 + (1 - \theta) \beta F_{\rho\sigma} F^{\rho\sigma} \right] + \theta \beta F_{\rho\sigma} F^{\rho\sigma} \right\rbrace$$
@@ -51,6 +51,15 @@ $$S_{WDF} = \int \frac{d^4x}{\pi^2} \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\
 2. **星系团极端碰撞态 (Cluster Scale):** 基于 $O_h$ 48阶群对称性破缺刚性导出的常数 $c_1$ 与 $c_2$，在纯几何投射下，精准复现了 Bullet Cluster（各向异性骨架分离）与 Abell 520（全同气体极度拥堵）中的透镜质量异常重分配。
 3. **CMB 高频段盲测大公账 (Microscopic Scale):** 在多极矩处于离散分形映射点（如 $\ell \sim 1836$ 及 $48$ 的谐波倍数）时，引擎物理触发高频缓冲相移（Phase Shift），成功镇压电磁泄露底噪，无需微扰流体自由变量即可完美闭合声学波峰。
 
+### ⚙️ 核心作用量 (文大方场方程)
+本理论管线中的所有代码逻辑，均严格通过变分以下非极小共形耦合拉格朗日作用量得出：
+
+$$S_{WDF} = \int \frac{d^4x}{\pi^2} \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\partial_\mu \phi \partial^\mu \phi) \left[ 1 + (1 - \theta) \beta F_{\rho\sigma} F^{\rho\sigma} \right] + \theta \beta F_{\rho\sigma} F^{\rho\sigma} \right\rbrace$$
+
+- **$\phi$**: 宏观引力骨架（主标量场）。
+- **$\beta$**: 拓扑唯一几何同调常数 $c_1$ ($1 / 24\sqrt{2}$)。
+- **$\theta$**: 拓扑相变测度 ($1/\pi^2$)，负责离散网格向连续流形的映射补偿。
+
 ---
 
 ## 🚀 Quick Start (一键自动化盲测)
@@ -60,7 +69,7 @@ $$S_{WDF} = \int \frac{d^4x}{\pi^2} \sqrt{-g} \left\lbrace e^{-\alpha \chi^2} (\
 Ensure your system has Python 3.8+ and NumPy installed.
 确保您的系统已安装 Python 3.8+ 及 NumPy。
 ```bash
-git clone https://github.com/smsaut3344/WDF-Theory.git
+git clone [https://github.com/smsaut3344/WDF-Theory.git](https://github.com/smsaut3344/WDF-Theory.git)
 cd WDF-Theory
 pip install numpy pandas
 ```
