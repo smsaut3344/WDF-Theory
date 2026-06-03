@@ -160,12 +160,12 @@
 <body class="lang-zh"> 
 
     <div class="sidebar">
-        <h2>WDF Engine</h2>
-        <button class="nav-btn" onclick="loadModule('foundation.html', this)">
+        <h2>WDF Theory</h2>
+        <button class="nav-btn active" onclick="loadModule('foundation.html', this)">
           <span class="zh">🧱 从第一性原理破解宇宙</span>
          <span class="en">🧱 Decoding the Universe from First Principles</span>
         </button>
-        <button class="nav-btn active" onclick="loadModule('home.html', this)">
+        <button class="nav-btn" onclick="loadModule('home.html', this)">
             <span class="zh">📚 核心理念与战绩</span><span class="en">📚 Core & Results</span>
         </button>
         <button class="nav-btn" onclick="loadModule('constants.html', this)">
@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         setLanguage('en');
     }
-    loadModule('home.html', document.querySelector('.nav-btn.active'));
+    loadModule('foundation.html', document.querySelector('.nav-btn.active'));
 });
 
 function setActiveButton(btn) {
