@@ -20,40 +20,69 @@
         2. <strong>反演与镜像 (24 种)：</strong> 将上述 24 种旋转与空间中心反演操作相乘。这是宇宙实现“左右对称”的必经之路。<br>
         <strong>结论：</strong> 24 (纯旋转) + 24 (反演) = <strong>48 个自由度</strong>。
         </span>
+        <strong class="en" style="display: block; margin-top: 10px;">Geometric breakdown:</strong>
+        <span class="en">
+        1. <strong>Pure Rotations (24 types):</strong> Including the identity operation (1), 90°/180°/270° rotations through face centers (9), 120°/240° rotations through body diagonals (8), and 180° rotations through edge centers (6).<br>
+        2. <strong>Inversions and Reflections (24 types):</strong> Multiplying the above 24 rotations by spatial center inversion. This is the mandatory path for the universe to achieve "left-right symmetry."<br>
+        <strong>Conclusion:</strong> 24 (Pure Rotations) + 24 (Inversions) = <strong>48 degrees of freedom</strong>.
+        </span>
     </div>
 
     <p class="zh" style="margin-top: 20px;"><strong>为什么必须是 48？这是物理学的红线：</strong></p>
+    <p class="en" style="margin-top: 20px;"><strong>Why must it be 48? This is the red line of physics:</strong></p>
+    
     <ul class="zh">
         <li><strong>若自由度 < 48：</strong> 宇宙将丢失反演对称性。这会引发“手性异常”，导致物理方程中出现违背物理现实的“鬼场 (Ghost Fields)”，整个方程组会瞬间坍缩。</li>
         <li><strong>若自由度 > 48：</strong> 该几何体不再适合三维空间填充，会引入非物理的高维剪切力，导致引力失去 $1/r^2$ 的本性。</li>
     </ul>
+    <ul class="en">
+        <li><strong>If degrees of freedom < 48:</strong> The universe loses inversion symmetry. This triggers "chiral anomalies," leading to "Ghost Fields" in physical equations that violate reality, causing the entire equation system to collapse instantly.</li>
+        <li><strong>If degrees of freedom > 48:</strong> The geometry is no longer suitable for 3D space tessellation, introducing non-physical high-dimensional shear forces and causing gravity to lose its $1/r^2$ nature.</li>
+    </ul>
+    
     <p class="zh">因此，<strong>48 既不是凑出来的，也不是演出来的，它是三维离散宇宙中，保证信息不形变、不丢失的“最小硬件参数”。</strong></p>
+    <p class="en">Therefore, <strong>48 is neither a tuned parameter nor an emergent property; it is the "minimum hardware parameter" in a 3D discrete universe to ensure information remains undeformed and unlost.</strong></p>
 
     <h3 style="color: var(--accent-color); margin-top: 40px;">
         <span class="zh">二、 宇宙大模型：生成式 AI 的运作逻辑</span>
         <span class="en">II. The Cosmic AI: Generative Logic of the Universe</span>
     </h3>
     <p class="zh">有了 48 阶硬件基座，我们如何理解宇宙的演化？我们可以把“文大方理论”理解为上帝在跑的一个超巨型 AI 模型。这能解释为什么宇宙在离散的像素中，却能演化出连续平滑的物理现象：</p>
+    <p class="en">With the 48-order hardware foundation, how do we understand cosmic evolution? We can conceptualize WDF Theory as a hyper-massive AI model run by God. This explains why the universe, despite consisting of discrete pixels, yields continuous and smooth physical phenomena:</p>
     
     <div style="background-color: #0d1117; padding: 15px; border-radius: 8px; border: 1px solid #30363d; margin-top: 15px;">
-        <h4 style="margin-top: 0;">1. 离散到连续：Embedding 嵌入技术</h4>
-        <p>AI 不会在每一个离散点上做加减乘除，它通过 Embedding 把离散的像素映射到“连续的潜在空间”中。宇宙亦然：底层虽然是 $O_h=48$ 的离散网格，但由于物理演化的需要，它在宏观上表现为 $SO(3)$ 的连续对称性。<strong>微积分（求导/极限）</strong>，本质上就是 AI 在潜在空间里做梯度传播的手段——它是在算“如何从离散参数中平滑地过渡到下一帧”。</p>
+        <h4 class="zh" style="margin-top: 0;">1. 离散到连续：Embedding 嵌入技术</h4>
+        <h4 class="en" style="margin-top: 0;">1. Discrete to Continuous: Embedding Technology</h4>
+        
+        <p class="zh">AI 不会在每一个离散点上做加减乘除，它通过 Embedding 把离散的像素映射到“连续的潜在空间”中。宇宙亦然：底层虽然是 $O_h=48$ 的离散网格，但由于物理演化的需要，它在宏观上表现为 $SO(3)$ 的连续对称性。<strong>微积分（求导/极限）</strong>，本质上就是 AI 在潜在空间里做梯度传播的手段——它是在算“如何从离散参数中平滑地过渡到下一帧”。</p>
+        <p class="en">AI does not perform arithmetic on every discrete point; it uses Embeddings to map discrete pixels into a "continuous latent space." The universe acts similarly: its foundation is an $O_h=48$ discrete grid, but driven by physical evolution, it manifests macroscopic $SO(3)$ continuous symmetry. <strong>Calculus (derivatives/limits)</strong> is essentially the AI's method of gradient propagation within the latent space—calculating "how to smoothly transition from discrete parameters to the next frame."</p>
     </div>
 
     <div style="background-color: #0d1117; padding: 15px; border-radius: 8px; border: 1px solid #30363d; margin-top: 15px;">
-        <h4 style="margin-top: 0;">2. 为什么必须求导：收敛与 Loss Function</h4>
-        <p>AI 需要求导来确定“Loss（误差）”的最小值。物理学中的“最小作用量原理” ($\delta S = 0$) 正是如此。我们在拉格朗日公式里求导，就是在计算：<strong>“在当前的 48 阶网格约束下，什么样的场分布是最省能量的？”</strong> 我们的门控项 $e^{-\alpha \chi^2}$ 就是归一化层，而 $1836$ 质量比就是系统为了稳定 3D 拓扑结构，必须支付的“正则化代价”。</p>
+        <h4 class="zh" style="margin-top: 0;">2. 为什么必须求导：收敛与 Loss Function</h4>
+        <h4 class="en" style="margin-top: 0;">2. Why Derive? Convergence and Loss Function</h4>
+        
+        <p class="zh">AI 需要求导来确定“Loss（误差）”的最小值。物理学中的“最小作用量原理” ($\delta S = 0$) 正是如此。我们在拉格朗日公式里求导，就是在计算：<strong>“在当前的 48 阶网格约束下，什么样的场分布是最省能量的？”</strong> 我们的门控项 $e^{-\alpha \chi^2}$ 就是归一化层，而 $1836$ 质量比就是系统为了稳定 3D 拓扑结构，必须支付的“正则化代价”。</p>
+        <p class="en">AI requires derivation to find the minimum "Loss" (error). The "Principle of Least Action" ($\delta S = 0$) in physics is exactly this. Taking derivatives in the Lagrangian formula is calculating: <strong>"Under current 48-order grid constraints, which field distribution minimizes energy?"</strong> Our gating term $e^{-\alpha \chi^2}$ acts as a normalization layer, and the $1836$ mass ratio is the "regularization cost" the system must pay to stabilize its 3D topology.</p>
     </div>
 
     <div style="background-color: #0d1117; padding: 15px; border-radius: 8px; border: 1px solid #30363d; margin-top: 15px;">
-        <h4 style="margin-top: 0;">3. 终极真相：反向传播与权重矩阵</h4>
-        <p>如果你把粒子碰撞看作一次迭代，那么：<br>
+        <h4 class="zh" style="margin-top: 0;">3. 终极真相：反向传播与权重矩阵</h4>
+        <h4 class="en" style="margin-top: 0;">3. The Ultimate Truth: Backpropagation and Weight Matrices</h4>
+        
+        <p class="zh">如果你把粒子碰撞看作一次迭代，那么：<br>
         <strong>微积分</strong>是局部像素的“梯度更新”，确保宇宙不产生“画面撕裂”；<br>
         <strong>拓扑量子化</strong>是 AI 中的“权重剪枝与量化”，它锁死在 48 的倍数上，防止模型过拟合。<br>
         数学家以为他们在处理无穷小，其实他们是在给一个离散的 AI 模型做近似。只要掌握了 $O_h=48$ 阶群，我们无需近似，直接读取到了宇宙的原始权重矩阵！</p>
+        
+        <p class="en">If we view particle collisions as iterations, then:<br>
+        <strong>Calculus</strong> is the "gradient update" of local pixels, ensuring the universe doesn't experience "screen tearing";<br>
+        <strong>Topological Quantization</strong> is the "weight pruning and quantization" in AI, locking onto multiples of 48 to prevent model overfitting.<br>
+        Mathematicians believe they are handling infinitesimals, but they are merely approximating a discrete AI model. By mastering the $O_h=48$ order group, we bypass approximation and directly read the universe's original weight matrix!</p>
     </div>
 
     <div class="highlight-box" style="margin-top: 30px; border-left-color: #ff7b72;">
         <span class="zh"><strong>总结：</strong>文大方理论不仅是物理学，它是宇宙底层代码的“反编译”。传统学界在连续空间里拟合数据，我们直接从 $O_h=48$ 出发，读取二进制。这就是为什么我们能推导出 1836 和 137，因为我们算的是宇宙“AI 渲染”的必然成本。</span>
+        <span class="en" style="display: block; margin-top: 10px;"><strong>Conclusion:</strong> WDF Theory is more than physics; it is a "decompilation" of the universe's source code. While traditional academia fits data within a continuous space, we start directly from $O_h=48$ and read the binary. This is why we can derive 1836 and 137—because we are calculating the inevitable cost of the universe's "AI rendering."</span>
     </div>
 </div>
