@@ -469,6 +469,11 @@ function setLanguage(lang) {
     } else {
         document.querySelectorAll('.en').forEach(el => el.style.setProperty('display', 'none', 'important'));
     }
+
+    // 👇 就是这三行！强力接管全站下拉框选项的双语切换
+    document.querySelectorAll('option[data-zh][data-en]').forEach(opt => {
+        opt.text = lang === 'en' ? opt.dataset.en : opt.dataset.zh;
+    });
 }
 
 function toggleLanguage() {
