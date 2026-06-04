@@ -86,34 +86,3 @@
 Waiting for standard astronomical data input or archive extraction...</span>
     </div>
 </div>
-
-<script>
-(function() {
-    const selects = document.querySelectorAll('.i18n-select');
-    
-    // 更新选项文本的函数
-    function updateSelectLanguage() {
-        const isEn = document.body.classList.contains('lang-en');
-        selects.forEach(select => {
-            Array.from(select.options).forEach(opt => {
-                if (opt.dataset.zh && opt.dataset.en) {
-                    opt.text = isEn ? opt.dataset.en : opt.dataset.zh;
-                }
-            });
-        });
-    }
-
-    // 1. 页面加载时执行一次对齐
-    updateSelectLanguage();
-
-    // 2. 监听 body 上的 class 变化 (语言切换时自动触发)
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.attributeName === "class") {
-                updateSelectLanguage();
-            }
-        });
-    });
-    observer.observe(document.body, { attributes: true });
-})();
-</script>
