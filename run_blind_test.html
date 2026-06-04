@@ -18,6 +18,7 @@
     </h3>
     
     <div class="terminal-box" style="color: #c9d1d9; background-color: #0d1117; border-color: #30363d; font-family: 'Consolas', 'Courier New', monospace; overflow-x: auto; font-size: 0.95em;">
+        <div class="zh">
 <pre style="margin: 0;"><code><span style="color: #ff7b72;">from</span> wdf_engine <span style="color: #ff7b72;">import</span> WDFEngine
 
 <span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">main</span>():
@@ -37,14 +38,44 @@
     perturbation = engine.get_collision_manifold_weight(vector_congruence=<span style="color: #79c0ff;">0.95</span>, congestion_volume=<span style="color: #79c0ff;">0.01</span>)
     l_max = <span style="color: #79c0ff;">5.0</span>
     final_amp = l_max * perturbation
-    print(f" -> 宏观基底杠杆 L_max: {l_max:.1f}")
-    print(f" -> 局域相变扰动乘数: {perturbation:.4f}")
-    print(f" -> 最终表观引力放大总倍率: {final_amp:.4f} 倍 (L_max * 扰动乘数)")
+    print(<span style="color: #a5d6ff;">f" -> 宏观基底杠杆 L_max: </span><span style="color: #79c0ff;">{l_max:.1f}</span><span style="color: #a5d6ff;">"</span>)
+    print(<span style="color: #a5d6ff;">f" -> 局域相变扰动乘数: </span><span style="color: #79c0ff;">{perturbation:.4f}</span><span style="color: #a5d6ff;">"</span>)
+    print(<span style="color: #a5d6ff;">f" -> 最终表观引力放大总倍率: </span><span style="color: #79c0ff;">{final_amp:.4f}</span><span style="color: #a5d6ff;"> 倍 (L_max * 扰动乘数)"</span>)
 
     print(<span style="color: #a5d6ff;">"\n================ 盲测完成 ================"</span>)
 
 <span style="color: #ff7b72;">if</span> __name__ == <span style="color: #a5d6ff;">"__main__"</span>:
     main()</code></pre>
+        </div>
+        <div class="en">
+<pre style="margin: 0;"><code><span style="color: #ff7b72;">from</span> wdf_engine <span style="color: #ff7b72;">import</span> WDFEngine
+
+<span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">main</span>():
+    engine = WDFEngine()
+    print(<span style="color: #a5d6ff;">"================ WDF Theory Cross-Scale Ledger Blind Test System ================"</span>)
+    print(<span style="color: #ff7b72;">"WARNING: System has absolutely locked topological constants (O_h=48, c1, c2). Phenomenological tuning is rejected."</span>)
+
+    <span style="color: #8b949e;"># Simulating SPARC data reading for blind testing</span>
+    print(<span style="color: #a5d6ff;">"\n[Test Stage 1] Initiating zero-tuning audit for SPARC galaxy database..."</span>)
+    mock_gbar = <span style="color: #79c0ff;">1e-11</span>
+    pred = engine.get_sparc_prediction(mock_gbar)
+    print(<span style="color: #a5d6ff;">f" -> Input Baryonic Gravity: </span><span style="color: #79c0ff;">{mock_gbar:.2e}</span><span style="color: #a5d6ff;"> | WDF 4th-Order Skeleton Prediction: </span><span style="color: #79c0ff;">{pred:.2e}</span><span style="color: #a5d6ff;">"</span>)
+
+    <span style="color: #8b949e;"># Simulating inputs of observed cluster features</span>
+    print(<span style="color: #a5d6ff;">"\n[Test Stage 2] Initiating giant cluster collision audit..."</span>)
+    print(<span style="color: #a5d6ff;">" -> Loading Archive: Bullet Cluster (High-speed anisotropic skeleton separation)"</span>)
+    perturbation = engine.get_collision_manifold_weight(vector_congruence=<span style="color: #79c0ff;">0.95</span>, congestion_volume=<span style="color: #79c0ff;">0.01</span>)
+    l_max = <span style="color: #79c0ff;">5.0</span>
+    final_amp = l_max * perturbation
+    print(<span style="color: #a5d6ff;">f" -> Macro Baseline Leverage L_max: </span><span style="color: #79c0ff;">{l_max:.1f}</span><span style="color: #a5d6ff;">"</span>)
+    print(<span style="color: #a5d6ff;">f" -> Local Phase Perturbation Multiplier: </span><span style="color: #79c0ff;">{perturbation:.4f}</span><span style="color: #a5d6ff;">"</span>)
+    print(<span style="color: #a5d6ff;">f" -> Final Apparent Gravity Amplification: </span><span style="color: #79c0ff;">{final_amp:.4f}</span><span style="color: #a5d6ff;">x (L_max * Perturbation)"</span>)
+
+    print(<span style="color: #a5d6ff;">"\n================ Audit Complete ================"</span>)
+
+<span style="color: #ff7b72;">if</span> __name__ == <span style="color: #a5d6ff;">"__main__"</span>:
+    main()</code></pre>
+        </div>
     </div>
     
     <button class="run-btn" onclick="runPythonSim()">
@@ -57,29 +88,53 @@
     <script>
         function runPythonSim() {
             const out = document.getElementById('py-output');
+            const isZh = document.body.classList.contains('lang-zh'); // 语言探测器
+            
             out.style.display = 'block';
             out.innerHTML = `<span style="color: #8b949e;">[System] Booting WDFEngine Virtual Environment...</span>\n`;
             
             setTimeout(() => {
-                out.innerHTML += `================ 文大方理论 (WDF) 跨尺度大公账盲测系统 ================\n`;
-                out.innerHTML += `<span style="color: #ff7b72;">警告：本系统已绝对锁死底层拓扑常数 (O_h=48, c1, c2)。拒绝任何唯象调参。</span>\n\n`;
+                if (isZh) {
+                    out.innerHTML += `================ 文大方理论 (WDF) 跨尺度大公账盲测系统 ================\n`;
+                    out.innerHTML += `<span style="color: #ff7b72;">警告：本系统已绝对锁死底层拓扑常数 (O_h=48, c1, c2)。拒绝任何唯象调参。</span>\n\n`;
+                } else {
+                    out.innerHTML += `================ WDF Theory Cross-Scale Ledger Blind Test System ================\n`;
+                    out.innerHTML += `<span style="color: #ff7b72;">WARNING: System has absolutely locked topological constants (O_h=48, c1, c2). Phenomenological tuning is rejected.</span>\n\n`;
+                }
             }, 500);
 
             setTimeout(() => {
-                out.innerHTML += `[测试阶段一] 启动 SPARC 星系库零调参核验...\n`;
-                out.innerHTML += ` -> 输入重子引力: 1.00e-11 | WDF 4阶骨架预测: 3.47e-11\n\n`; 
+                if (isZh) {
+                    out.innerHTML += `[测试阶段一] 启动 SPARC 星系库零调参核验...\n`;
+                    out.innerHTML += ` -> 输入重子引力: 1.00e-11 | WDF 4阶骨架预测: 3.47e-11\n\n`; 
+                } else {
+                    out.innerHTML += `[Test Stage 1] Initiating zero-tuning audit for SPARC galaxy database...\n`;
+                    out.innerHTML += ` -> Input Baryonic Gravity: 1.00e-11 | WDF 4th-Order Skeleton Prediction: 3.47e-11\n\n`; 
+                }
             }, 1200);
             
             setTimeout(() => {
-                out.innerHTML += `[测试阶段二] 启动巨型星系团连环碰撞核验...\n`;
-                out.innerHTML += ` -> 加载观测档案：子弹星系团 (高速各向异性骨架分离)\n`;
-                out.innerHTML += ` -> 宏观基底杠杆 L_max: 5.0\n`;
-                out.innerHTML += ` -> 局域相变扰动乘数: 1.0272\n`; 
-                out.innerHTML += ` -> 最终表观引力放大总倍率: 5.1360 倍 (L_max * 扰动乘数)\n\n`;
+                if (isZh) {
+                    out.innerHTML += `[测试阶段二] 启动巨型星系团连环碰撞核验...\n`;
+                    out.innerHTML += ` -> 加载观测档案：子弹星系团 (高速各向异性骨架分离)\n`;
+                    out.innerHTML += ` -> 宏观基底杠杆 L_max: 5.0\n`;
+                    out.innerHTML += ` -> 局域相变扰动乘数: 1.0272\n`; 
+                    out.innerHTML += ` -> 最终表观引力放大总倍率: 5.1360 倍 (L_max * 扰动乘数)\n\n`;
+                } else {
+                    out.innerHTML += `[Test Stage 2] Initiating giant cluster collision audit...\n`;
+                    out.innerHTML += ` -> Loading Archive: Bullet Cluster (High-speed anisotropic skeleton separation)\n`;
+                    out.innerHTML += ` -> Macro Baseline Leverage L_max: 5.0\n`;
+                    out.innerHTML += ` -> Local Phase Perturbation Multiplier: 1.0272\n`; 
+                    out.innerHTML += ` -> Final Apparent Gravity Amplification: 5.1360x (L_max * Perturbation)\n\n`;
+                }
             }, 2000);
 
             setTimeout(() => {
-                out.innerHTML += `<span style="color: #4af626;">================ 盲测完成 ================</span>`;
+                if (isZh) {
+                    out.innerHTML += `<span style="color: #4af626;">================ 盲测完成 ================</span>`;
+                } else {
+                    out.innerHTML += `<span style="color: #4af626;">================ Audit Complete ================</span>`;
+                }
             }, 2800);
         }
     </script>
