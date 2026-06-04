@@ -17,16 +17,11 @@
                 <span class="zh">📂 预载观测档案:</span>
                 <span class="en">📂 Pre-loaded Archives:</span>
             </label>
-            <select id="select-galaxy" style="background-color: #0d1117; color: #fff; border: 1px solid #30363d; padding: 6px; width: 220px;">
-                <option value="custom" class="zh">-- 自定义输入 --</option>
-                <option value="ngc0289" class="zh">NGC0289 (预言断崖靶点)</option>
-                <option value="ngc1052df2" class="zh">NGC 1052-DF2 (超弥散星系)</option>
-                <option value="milkyway" class="zh">银河系尺度基准</option>
-                
-                <option value="custom" class="en">-- Custom Input --</option>
-                <option value="ngc0289" class="en">NGC0289 (Cliff Target)</option>
-                <option value="ngc1052df2" class="en">NGC 1052-DF2 (Ultra-Diffuse Galaxy)</option>
-                <option value="milkyway" class="en">Milky Way Proxy</option>
+            <select id="select-galaxy" class="i18n-select" style="background-color: #0d1117; color: #fff; border: 1px solid #30363d; padding: 6px; width: 220px;">
+                <option value="custom" data-zh="-- 自定义输入 --" data-en="-- Custom Input --">-- 自定义输入 --</option>
+                <option value="ngc0289" data-zh="NGC0289 (预言断崖靶点)" data-en="NGC0289 (Cliff Target)">NGC0289 (预言断崖靶点)</option>
+                <option value="ngc1052df2" data-zh="NGC 1052-DF2 (超弥散星系)" data-en="NGC 1052-DF2 (Ultra-Diffuse Galaxy)">NGC 1052-DF2 (超弥散星系)</option>
+                <option value="milkyway" data-zh="银河系尺度基准" data-en="Milky Way Proxy">银河系尺度基准</option>
             </select>
             <button onclick="window.load_galaxy_data()" class="run-btn" style="padding: 6px 12px; margin-left: 10px; font-size: 0.9em; background-color: #1f6feb;">
                 <span class="zh">载入档案</span><span class="en">Load Archive</span>
@@ -56,18 +51,12 @@
                 <span class="zh">📂 预载案发现场:</span>
                 <span class="en">📂 Pre-loaded Scenes:</span>
             </label>
-            <select id="select-cluster" style="background-color: #0d1117; color: #fff; border: 1px solid #30363d; padding: 6px; width: 220px;">
-                <option value="custom" class="zh">-- 自定义输入 --</option>
-                <option value="bullet" class="zh">1E 0657-558 (子弹星系团)</option>
-                <option value="abell520" class="zh">Abell 520 (火车头空难)</option>
-                <option value="macs" class="zh">MACS J0025 (婴儿子弹团)</option>
-                <option value="pandora" class="zh">Abell 2744 (潘多拉连环撞)</option>
-                
-                <option value="custom" class="en">-- Custom Input --</option>
-                <option value="bullet" class="en">1E 0657-558 (Bullet Cluster)</option>
-                <option value="abell520" class="en">Abell 520 (Train Wreck Anomaly)</option>
-                <option value="macs" class="en">MACS J0025 (Baby Bullet)</option>
-                <option value="pandora" class="en">Abell 2744 (Pandora Cluster)</option>
+            <select id="select-cluster" class="i18n-select" style="background-color: #0d1117; color: #fff; border: 1px solid #30363d; padding: 6px; width: 220px;">
+                <option value="custom" data-zh="-- 自定义输入 --" data-en="-- Custom Input --">-- 自定义输入 --</option>
+                <option value="bullet" data-zh="1E 0657-558 (子弹星系团)" data-en="1E 0657-558 (Bullet Cluster)">1E 0657-558 (子弹星系团)</option>
+                <option value="abell520" data-zh="Abell 520 (火车头空难)" data-en="Abell 520 (Train Wreck Anomaly)">Abell 520 (火车头空难)</option>
+                <option value="macs" data-zh="MACS J0025 (婴儿子弹团)" data-en="MACS J0025 (Baby Bullet)">MACS J0025 (婴儿子弹团)</option>
+                <option value="pandora" data-zh="Abell 2744 (潘多拉连环撞)" data-en="Abell 2744 (Pandora Cluster)">Abell 2744 (潘多拉连环撞)</option>
             </select>
             <button onclick="window.load_cluster_data()" class="run-btn" style="padding: 6px 12px; margin-left: 10px; font-size: 0.9em; background-color: #1f6feb;">
                 <span class="zh">提取参数</span><span class="en">Extract Parameters</span>
@@ -97,3 +86,34 @@
 Waiting for standard astronomical data input or archive extraction...</span>
     </div>
 </div>
+
+<script>
+(function() {
+    const selects = document.querySelectorAll('.i18n-select');
+    
+    // 更新选项文本的函数
+    function updateSelectLanguage() {
+        const isEn = document.body.classList.contains('lang-en');
+        selects.forEach(select => {
+            Array.from(select.options).forEach(opt => {
+                if (opt.dataset.zh && opt.dataset.en) {
+                    opt.text = isEn ? opt.dataset.en : opt.dataset.zh;
+                }
+            });
+        });
+    }
+
+    // 1. 页面加载时执行一次对齐
+    updateSelectLanguage();
+
+    // 2. 监听 body 上的 class 变化 (语言切换时自动触发)
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.attributeName === "class") {
+                updateSelectLanguage();
+            }
+        });
+    });
+    observer.observe(document.body, { attributes: true });
+})();
+</script>
