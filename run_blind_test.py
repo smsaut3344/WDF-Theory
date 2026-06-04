@@ -37,8 +37,9 @@
     perturbation = engine.get_collision_manifold_weight(vector_congruence=<span style="color: #79c0ff;">0.95</span>, congestion_volume=<span style="color: #79c0ff;">0.01</span>)
     l_max = <span style="color: #79c0ff;">5.0</span>
     final_amp = l_max * perturbation
-    print(<span style="color: #a5d6ff;">f" -> 宏观基底杠杆 L_max: </span><span style="color: #79c0ff;">{l_max:.1f}</span><span style="color: #a5d6ff;">"</span>)
-    print(<span style="color: #a5d6ff;">f" -> 最终表观引力放大总倍率: </span><span style="color: #79c0ff;">{final_amp:.4f}</span><span style="color: #a5d6ff;"> 倍 (L_max * 扰动乘数)"</span>)
+    print(f" -> 宏观基底杠杆 L_max: {l_max:.1f}")
+    print(f" -> 局域相变扰动乘数: {perturbation:.4f}")
+    print(f" -> 最终表观引力放大总倍率: {final_amp:.4f} 倍 (L_max * 扰动乘数)")
 
     print(<span style="color: #a5d6ff;">"\n================ 盲测完成 ================"</span>)
 
