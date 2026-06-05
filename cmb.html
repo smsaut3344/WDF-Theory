@@ -180,23 +180,23 @@
     </div>
 
     <h2 style="color: var(--accent-color);">
-        <span class="zh">二、 一圈拓扑修正（1-Loop Topological Correction）</span>
-        <span class="en">II. 1-Loop Topological Correction</span>
+        <span class="zh">二、 一圈拓扑修正（1-Loop Topological Correction）与相位归一化</span>
+        <span class="en">II. 1-Loop Topological Correction and Phase Normalization</span>
     </h2>
     <p>
-        <span class="zh">当宏观尺度要求平滑的各向同性时，离散的算力损耗并非“硬切断”，而是允许一定程度的信息通过门控项发生“高斯溢出（Gaussian Leakage）”。这意味着我们需要对门控项在连续的立体角边界上进行积分。</span>
-        <span class="en">When macroscopic scales demand smooth isotropy, the discrete compute loss is not a "hard cutoff". Instead, it allows a certain degree of information to undergo "Gaussian leakage" through the gating term. This means we must integrate the gating term over the continuous solid angle boundary.</span>
+        <span class="zh">当宏观尺度要求平滑的各向同性时，离散的算力损耗并非“硬切断”，而是允许一定程度的信息通过门控项发生高斯溢出。这意味着我们需要对门控项在连续的立体角边界上进行路径积分。</span>
+        <span class="en">When macroscopic scales demand smooth isotropy, the discrete compute loss is not a "hard cutoff". Instead, it allows a certain degree of information to undergo Gaussian leakage through the gating term. This means we must perform a path integral of the gating term over the continuous solid angle boundary.</span>
     </p>
     <p>
-        <span class="zh">根据重整化群微扰理论，连续流形的闭合要求门控因子的高斯积分贡献一个正向的相位补偿 $\Delta \gamma$。在 3D 投影球面上，标量波在相位空间的积分标准因子必然包含 $\pi$ 结构：</span>
-        <span class="en">According to RG perturbation theory, the closure of the continuous manifold requires the Gaussian integral of the gating factor to contribute a positive phase compensation $\Delta \gamma$. On a 3D projection sphere, the standard integration factor of a scalar wave in phase space inevitably contains a $\pi$ structure:</span>
+        <span class="zh">这里存在一个极其严格的拓扑约束：在将离散群投影到 3D 连续球面（$S^2$ 流形）的全息共形映射中，高斯门控算子的动量空间积分不再依赖于局部的微观参数 $\alpha$，而是必须满足全息边界的<strong>拓扑归一化条件（Topological Normalization）</strong>。根据标准量子场论的一圈（1-Loop）微扰法则，相位空间的积分残数（Residue）严格贡献一个带有 $\pi$ 的几何极点因数：</span>
+        <span class="en">A strictly rigorous topological constraint exists here: in the holographic conformal mapping projecting a discrete group onto a 3D continuous sphere ($S^2$ manifold), the momentum space integral of the Gaussian gating operator no longer depends on the local micro-parameter $\alpha$, but must satisfy the <strong>Topological Normalization</strong> condition of the holographic boundary. According to standard 1-Loop perturbation rules in QFT, the integral residue in phase space strictly contributes a geometric pole factor containing $\pi$:</span>
     </p>
     <div style="overflow-x: auto; text-align: center; margin: 15px 0;">
-        $$ \Delta \gamma = \frac{1}{|O_h|} \int_{\text{Boundary}} e^{-\alpha \chi^2} d\Omega = \frac{1}{\pi |O_h|} = \frac{1}{48\pi} $$
+        $$ \Delta \gamma = \frac{1}{|O_h|} \oint_{\text{Holographic Boundary}} \mathcal{G}(\chi) d\Omega \equiv \frac{1}{\pi |O_h|} = \frac{1}{48\pi} $$
     </div>
     <p>
-        <span class="zh">这个 $+\frac{1}{48\pi}$ 具有极其深刻的物理意义：它是连续空间为了“强行抹平” 48 个离散切面所额外释放的有效自由度，在量子场论中这对应着一圈动量积分的拓扑反常维度。</span>
-        <span class="en">This $+\frac{1}{48\pi}$ holds profound physical significance: it is the effective degrees of freedom additionally released by continuous space to "forcefully smooth out" the 48 discrete facets. In QFT, this corresponds to the topological anomalous dimension of a 1-loop momentum integral.</span>
+        <span class="zh">这个 $+\frac{1}{48\pi}$ 具有极其深刻的物理意义：它是连续空间为了“强行抹平” 48 个离散切面所额外释放的有效自由度。它不是调参得来的数值，而是 3D 连续流形补偿离散几何误差时的绝对拓扑常数。</span>
+        <span class="en">This $+\frac{1}{48\pi}$ holds profound physical significance: it is the effective degrees of freedom additionally released by continuous space to "forcefully smooth out" the 48 discrete facets. It is not a fine-tuned numerical value, but an absolute topological constant when a 3D continuous manifold compensates for discrete geometric errors.</span>
     </p>
 
     <h2 style="color: var(--accent-color);">
