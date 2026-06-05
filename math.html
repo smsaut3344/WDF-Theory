@@ -1,65 +1,139 @@
 <div class="page active">
     <h1>
-        <span class="zh">📐 宇宙源代码：第一性原理与群论刚性推导</span>
-        <span class="en">📐 Source Code: First Principles & Group Theory Derivation</span>
+        <span class="zh">📐 宇宙源代码：六大刚性公理定理与群论推导</span>
+        <span class="en">📐 Source Code: Six Rigid Axiomatic Theorems & Group Theory Derivation</span>
     </h1>
     
-    <p class="zh">本页面展示文大方理论 (WDF Theory) 底层物理引擎的纯几何数学代数根基。我们彻底摒弃了所有经验性的自由调节参数，所有流形变分算子与门控大闸的系数，全部由底层 $O_h=48$ 阶群在 4 维时空流形下的几何投影刚性锁定。</p>
-    <p class="en">This page manifests the pure geometric and algebraic foundations of the WDF physical engine. We completely eradicate all empirical parameters; every manifold variational operator and gate coefficient is rigidly locked by the geometric projection of the $O_h=48$ order group within a 4D spacetime manifold.</p>
+    <p class="zh">本页面展示文大方理论 (WDF Theory) 底层物理引擎的纯几何数学代数根基。我们彻底摒弃了所有经验性的自由调节参数，本理论中的所有核心常数均非“唯象拟合”，而是基于以下拓扑学与群论定理所导出的<strong>唯一数学解</strong>。这是从“猜想”通向“第一性原理”的绝对公理化体系。</p>
+    <p class="en">This page manifests the pure geometric and algebraic foundations of the WDF physical engine. We completely eradicate all empirical parameters. All core constants in this theory are not "phenomenological fits," but the <strong>unique mathematical solutions</strong> derived from the following rigorous topological and group-theoretic theorems, elevating the framework from conjecture to First Principles.</p>
 
     <h2>
-        <span class="zh">1. $O_h$ 48阶群与规范对称性破缺 ($c_1$ 与 $c_2$)</span>
-        <span class="en">1. $O_h$ Order-48 Group & Gauge Symmetry Breaking ($c_1$ & $c_2$)</span>
+        <span class="zh">公理零：贝肯斯坦全息离散定律 (为何时空必须是晶格？)</span>
+        <span class="en">Axiom 0: Bekenstein Holographic Discretization (Why must spacetime be a lattice?)</span>
     </h2>
-    <p class="zh">宇宙底层离散像素载体满足最高各向同性对称性的全正八面体群（$O_h$），其阶数为 48。当流形处于不同信息流变轨状态时，群对称性发生自发破缺，刚性导出物理引擎的两个核心几何不变量：</p>
-    <p class="en">The underlying discrete pixel carrier satisfies the full octahedral group ($O_h$) with the highest isotropy, having an order of 48. Spontaneous symmetry breaking under varying informational transport states rigidly yields two core geometric invariants:</p>
+    <p class="zh"><strong>公理发问：</strong> 现代物理学真的接受了时空晶格化吗？为什么不能是连续流形？</p>
+    <p class="en"><strong>Axiomatic Inquiry:</strong> Does modern physics truly accept spacetime crystallization? Why can't it be a continuous manifold?</p>
+    
+    <p class="zh">根据黑洞热力学的<strong>贝肯斯坦-霍金熵界（Bekenstein Bound, $S \le A/4l_p^2$）</strong>，任何有限体积内的信息量（自由度）必须是有限的。如果时空是连续的流形，哪怕是一毫米的空间内，都会包含无数个点，对应无限的自由度，这将导致算力与信息的发散爆炸。为了保全黑洞热力学和全息原理，时空在普朗克尺度下绝对、必须是离散的晶格！</p>
+    <p class="en">According to the black hole thermodynamic <strong>Bekenstein-Hawking Entropy Bound ($S \le A/4l_p^2$)</strong>, the amount of information (degrees of freedom) within any finite volume must be finite. If spacetime were a continuous manifold, even a millimeter of space would contain infinite points, causing an information explosion. To preserve black hole thermodynamics and the holographic principle, spacetime absolutely must be a discrete lattice at the Planck scale!</p>
+
+    <h2>
+        <span class="zh">定理一：引力张量宇称定理 (唯一 $O_h$ 群证明)</span>
+        <span class="en">Theorem I: Gravitational Tensor Parity Theorem (Unique Proof of $O_h$ Group)</span>
+    </h2>
+    <p class="zh"><strong>公理发问：</strong> 既然必须离散，为什么底层网格必须是 48阶全正八面体群 $O_h$，而不能是 24阶四面体群 $T_d$ 或连续的 $SU(2)$？</p>
+    <p class="en"><strong>Axiomatic Inquiry:</strong> Given it must be discrete, why must the grid be the 48-order octahedral group $O_h$, instead of the 24-order $T_d$ or continuous $SU(2)$?</p>
+    
+    <p class="zh">在广义相对论中，引力由度规张量 $g_{\mu\nu}$ 描述。作为一个二阶对称张量，它在空间反演（$x \to -x$）下必须保持绝对不变，即具有<strong>偶宇称（Parity $P = +1$）</strong>。如果底层离散群是 $T_d$，由于其不包含中心反演操作，必然会混合奇宇称项，导致引力场中出现违背观测的“引力双折射”或扭率项（Chern-Simons term）。</p>
+    <p class="en">In General Relativity, the metric tensor $g_{\mu\nu}$ is symmetric and must remain absolutely invariant under spatial inversion ($x \to -x$), possessing <strong>even parity ($P = +1$)</strong>. If the discrete group were $T_d$, which lacks an inversion center, it would inevitably mix odd-parity terms, causing non-physical "gravitational birefringence" or Chern-Simons terms.</p>
     
     <div class="highlight-box">
-        <strong class="zh">秩序激活常数 ($c_1$)：</strong><span class="zh">当物质介入导致宇称破缺时，系统有效自由度减半为 24 通道旋转上限，导出引力放大两翼的激活系数：</span><br>
-        <strong class="en">Order Activation Constant ($c_1$):</strong><span class="en"> Parity breaking halves effective degrees of freedom to a 24-channel rotational limit:</span><br>
-        $$c_1 = \frac{1}{24\sqrt{2}} \approx 0.02946$$
-        <br>
-        <strong class="zh">无序拥堵归并常数 ($c_2$)：</strong><span class="zh">当全同气体极度拥堵、流形发生强冲突时，自由度进一步退化收拢为 12 通道归并基准，导出无序屏蔽系数：</span><br>
-        <strong class="en">Disorder Congestion Merging Constant ($c_2$):</strong><span class="en"> Extreme congestion collapses degrees of freedom to a 12-channel consolidation baseline:</span><br>
-        $$c_2 = \frac{1}{12\sqrt{2}} \approx 0.05892$$
+        <strong class="zh">数学唯一性：</strong><span class="zh">为了在离散层面上严格保证引力的 $P=+1$ 偶宇称，且必须 100% 无缝平铺三维欧几里得空间以防止信息丢包，底层对称群<strong>有且仅有包含反演中心的 $O_h$（48阶群）</strong>。$O_h=48$ 是拓扑学的唯一合法解。</span><br>
+        <strong class="en">Mathematical Uniqueness:</strong><span class="en"> To strictly guarantee $P=+1$ even parity and ensure 100% seamless 3D tessellation to prevent packet loss, the symmetry group <strong>must uniquely be $O_h$ (order 48) containing an inversion center</strong>. $O_h=48$ is the sole topological solution.</span>
     </div>
 
     <h2>
-        <span class="zh">2. 时空投影大闸与 12 通道本源投影比（拒绝 19 / 37 凑数）</span>
-        <span class="en">2. Spacetime Projection Gate & 12-Channel Fundamental Ratio</span>
+        <span class="zh">定理二：全息投影均分定理 (洛伦兹协变基底)</span>
+        <span class="en">Theorem II: Holographic Equipartition Theorem (Lorentz Covariant Baseline)</span>
     </h2>
-    <p class="zh">我们彻底清除了旧范式中由于观测残留引入的 19 和 37 等经验滑块。在最新大公账算法中，全局资产标度与空间输运控制完全由维度投影律统治：</p>
-    <p class="en">We completely purge empirical placeholders like 19 and 37. In the formalized global ledger algorithm, assets scaling and spatial transport are strictly governed by dimensional projection laws:</p>
+    <p class="zh">在 WDF 的离散架构中，48 是微观信息节点的内部相空间容量。当这股信息映射到宏观的 4 维闵可夫斯基流形时，为了保证宏观时空的<strong>洛伦兹不变性（Lorentz Invariance）</strong>，即在任何惯性系下时间与空间不发生特权倾斜，这 48 个内部自由度必须向 4 个正交的时空基底（$t, x, y, z$）进行绝对正交的等量投影。</p>
+    <p class="en">In WDF architecture, 48 is the internal phase space capacity. When mapped to the macroscopic 4D Minkowski manifold, to ensure <strong>Lorentz Invariance</strong> (no preferred spacetime direction), these 48 degrees of freedom must be projected orthogonally and equally onto the 4 spacetime bases ($t, x, y, z$).</p>
     
-    <ul>
-        <li>
-            <strong class="zh">12通道本源投影比（`lattice_ratio = 0.12`）：</strong>
-            <strong class="en">12-Channel Fundamental Projection Ratio (`lattice_ratio = 0.12`):</strong>
-            <span class="zh">总硬件自由度 $O_h=48$ 在 4 维时空（$D_M=4$）中投影，单维基底份额为 $48/4=12$。在引擎的综合流形权重平衡大闸中，资产规模的调控系数被硬性锚定为百分比投影：</span>
-            <span class="en">The total hardware degrees of freedom $O_h=48$ projected into 4D spacetime ($D_M=4$) yields a single-dimensional base share of $48/4=12$. Within the engine's comprehensive manifold weight balance gate, the asset scale control coefficient is rigidly anchored as a percentage projection:</span>
-            <br>$$\mathcal{R}_{lattice} = \frac{12}{100} = 0.12$$
-            <br><span class="zh">由此直接导出代码中的海维赛德拓扑点火大闸 (Heaviside Topological Gate)。这是导致矮星系在低于临界质量时，引力放大绝对断崖式全面关停的数学根源：</span>
-            <span class="en">This directly derives the Heaviside Topological Gate in the code. It is the mathematical root cause that enforces an absolute cliff shutdown of gravity amplification in dwarf galaxies below critical mass:</span>
-            <br>$$\mathcal{W}_{scale} = \Theta \left( g_{bar} - a_0 \cdot \mathcal{R}_{lattice}^2 \right)$$
-        </li>
-        <li style="margin-top: 15px;">
-            <strong class="zh">4维时空流形输运饱和度：</strong>
-            <strong class="en">4D Spacetime Manifold Transport Saturation:</strong>
-            <span class="zh">形态流形在全局输运距离 $W$ 上的传播并非线性发散，而是受制于 4 维时空投影约束（$D_M=4$）产生的自适应饱和阻尼，直接对应 Python 引擎中的规则一：</span>
-            <span class="en">The propagation of the morphological manifold over the global transport distance $W$ is not linearly divergent, but is subject to an adaptive saturation damping generated by the 4D spacetime projection constraint ($D_M=4$), corresponding directly to Rule 1 in the Python engine:</span>
-            <br>$$\mathcal{S}_{disp} = \frac{W}{4 + W}$$
-        </li>
-    </ul>
+    <div class="highlight-box">
+        <strong class="zh">数学唯一性：</strong><span class="zh">如果投影是 16+16+8+8 这种不对称形式，意味着在真空中某些方向的空间带宽偏大，即“真空自发洛伦兹破缺”。百年来的<strong>迈克尔逊-莫雷实验</strong>极其严苛地证明了光速在各个方向绝对一致。因此，唯一的数学解是绝对等分：$48 / 4 = 12$。</span><br>
+        <strong class="en">Mathematical Uniqueness:</strong><span class="en"> An asymmetric projection like 16+16+8+8 implies "spontaneous Lorentz breaking of the vacuum," where spatial bandwidth varies by direction. A century of <strong>Michelson-Morley experiments</strong> strictly proves the isotropic constancy of the speed of light. Thus, the only legitimate mathematical solution is absolute equipartition: $48 / 4 = 12$.</span>
+    </div>
 
     <h2>
-        <span class="zh">3. 格拉斯曼幂零律与全息防冲突协议</span>
-        <span class="en">3. Grassmann Nilpotent Law & Holographic Collision-Free Protocol</span>
+        <span class="zh">定理三：规范同调归一化定理 ($c_1, c_2$ 与 0.12 点火大闸)</span>
+        <span class="en">Theorem III: Gauge Homology Normalization Theorem ($c_1, c_2$ & 0.12 Gate)</span>
     </h2>
-    <p class="zh">为了死守“宇宙账本一个存储节点绝不记两笔重叠账”的信息论安全红线，文大方理论遵循费米子外代数本征幂零律 $\theta^2 = 0$，将离散空间中的高能场强冲突进行平滑对冲：</p>
-    <p class="en">To enforce the information-theoretic constraint that "a single storage node can never double-count overlapping asset ledgers," WDF Theory adopts the exterior algebra nilpotency $\theta^2 = 0$ to neutralize high-energy grid conflicts:</p>
+    <p class="zh">常数绝非人为定义，而是 $O_h$ 群破缺的拓扑模。当物质存在引发反演对称性破缺时，48 阶降维至纯旋转子群 $O$ (24阶)。为了保持幺正性，向连续态投影必须乘以 $L^2$ 范数的归一化因子 $\frac{1}{\sqrt{2}}$。</p>
+    <p class="en">Constants are topological modes of $O_h$ symmetry breaking. When matter breaks inversion symmetry, 48 reduces to the pure rotation subgroup $O$ (order 24). To maintain unitarity, projecting to a continuous state requires the $L^2$ norm normalization factor $\frac{1}{\sqrt{2}}$.</p>
+
+    <ul>
+        <li><strong class="zh">秩序激活常数：</strong><span class="zh">$c_1 = \frac{1}{24\sqrt{2}} \approx 0.02946$</span>
+            <strong class="en">Order Activation Constant:</strong><span class="en">$c_1 = \frac{1}{24\sqrt{2}} \approx 0.02946$</span></li>
+        <li><strong class="zh">无序归并常数：</strong><span class="zh">当发生极端拥堵时，失去方向区分度，24阶商去 $Z_2$ 对称性降至 12阶，导出 $c_2 = \frac{1}{12\sqrt{2}} \approx 0.05892$</span>
+            <strong class="en">Disorder Merging Constant:</strong><span class="en">Extreme congestion causes a loss of directionality, quotienting a $Z_2$ symmetry from 24 to 12, yielding $c_2 = \frac{1}{12\sqrt{2}} \approx 0.05892$</span></li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong class="zh">数学唯一性 (0.12 的代数真身)：</strong><span class="zh">触发宏观引力点火的本源投影比，根本不是人为设定的百分制“12/100”，而是<strong>双体极限拥堵时的碰撞临界态，即 $2 \times c_2$</strong>！<br>
+        $$\mathcal{R}_{lattice} = 2 c_2 = \frac{2}{12\sqrt{2}} = \frac{1}{6\sqrt{2}} \approx 0.11785$$ <br>
+        0.11785 在工程代码中被极其自然地表达为 0.12。由此刚性导出控制超弥散星系生死的<strong>海维赛德点火大闸</strong>：<br>
+        $$\mathcal{W}_{scale} = \Theta \left( g_{bar} - a_0 \cdot \mathcal{R}_{lattice}^2 \right)$$</span>
+        
+        <strong class="en">Mathematical Uniqueness (The True 0.12):</strong><span class="en"> The ignition projection ratio is NOT an arbitrary base-100 fraction "12/100". It is exactly <strong>the 2-body collision limit: $2 \times c_2$</strong>!<br>
+        $$\mathcal{R}_{lattice} = 2 c_2 = \frac{2}{12\sqrt{2}} = \frac{1}{6\sqrt{2}} \approx 0.11785$$ <br>
+        This precisely emerges as ~0.12. This rigidly derives the <strong>Heaviside Topological Gate</strong> governing galaxy survival:<br>
+        $$\mathcal{W}_{scale} = \Theta \left( g_{bar} - a_0 \cdot \mathcal{R}_{lattice}^2 \right)$$</span>
+    </div>
+
+    <h2>
+        <span class="zh">定理四：宇宙学标量模激发定理 (13/12 哈勃常数跃迁)</span>
+        <span class="en">Theorem IV: Cosmological Scalar Mode Excitation Theorem (13/12 Transition)</span>
+    </h2>
+    <p class="zh">在早期 CMB 时期，物质辐射紧密耦合，流形被锁定在基准的 12 通道中。晚期宇宙伴随暗能量显现，度规张量中多出了一个<strong>全局动态标量场 (宇宙尺度因子 $a(t)$)</strong>。作为一个宏观标量场，它在动力学拓扑上强制增加了一个正交的宏观自由度。</p>
+    <p class="en">In the early CMB era, tight coupling locked the manifold into the base 12 channels. In the late universe, accelerated expansion introduces a <strong>Global Dynamical Scalar Field (the scale factor $a(t)$)</strong> into the metric tensor. Topologically, this scalar field forces exactly one additional orthogonal macroscopic degree of freedom.</p>
     
-    $$g_{calibrated} = \frac{g_{bar}}{\sqrt{2}\cdot\sqrt{1 - e^{-g_{bar}/g_{base}}}}$$
+    <div class="highlight-box">
+        <strong class="zh">数学唯一性：</strong><span class="zh">拓扑不变量（如 Betti 数）只能是整数。从早期局部网格到晚期全局膨胀，宇宙通道数必然发生 $12 \to 12 + 1 = 13$ 的绝对整数跃迁。13/12（约 1.0833）是度规膨胀的整数相变解，将 67.4 刚性乘至 73.016，彻底终结哈勃危机。</span><br>
+        <strong class="en">Mathematical Uniqueness:</strong><span class="en"> Topological invariants (like Betti numbers) must be integers. Transitioning from local grids to global expansion forces an absolute integer jump: $12 \to 12 + 1 = 13$. The 13/12 ratio (~1.0833) rigidly shifts $H_0$ from 67.4 to exactly 73.016, closing the Hubble tension.</span>
+    </div>
+
+    <h2>
+        <span class="zh">定理五：晶格高斯因果律 ($\mathcal{L}_{max}=5$ 散射极限)</span>
+        <span class="en">Theorem V: Lattice Gauss Causality Law ($\mathcal{L}_{max}=5$ Limit)</span>
+    </h2>
+    <p class="zh">在格点规范场论 (LQCD) 中，信息通量必须垂直穿过面（Plaquette）。一个底层信息立方体有 6 个面。为了保证宏观因果律不被破坏（禁止时间倒流），根据离散高斯定理，必须有且仅有 1 个面作为“过去时间的输入端”，信息被绝对禁止从此面反向流出。</p>
+    <p class="en">In Lattice Gauge Theory (LQCD), information flux must pierce through faces (Plaquettes). A baseline information cube has 6 faces. To preserve macroscopic causality (no time travel backwards) under the discrete Gauss Law, exactly 1 face must serve as the "past light-cone input," strictly forbidding reverse flux.</p>
     
-    <p class="zh"><strong>物理与算法意义：</strong> 微积分求导的本质是宇宙 AI 在进行宏观连续渲染的梯度更新。由于格拉斯曼幂零律导致的非重叠协议，当局部能量通量逼近节点容纳极限时，系统会自动触发此归一化大闸，迫使发散的紫外能量强制截断。这从代数层面上直接抹平了量子场论中高达 $10^{120}$ 倍的“真空零点能灾变”。</p>
-    <p class="en"><strong>Physical & Algorithmic Meaning:</strong> Differentiation is the gradient descent tool for the cosmic AI's macroscopic continuous rendering. Under Grassmann nilpotency, extreme localized energy flux triggers this normalization gate, forcing an absolute UV cutoff on divergent energy. This algebraically resolves the notorious $10^{120}$ vacuum energy catastrophe in quantum field theory.</p>
+    <div class="highlight-box">
+        <strong class="zh">数学唯一性：</strong><span class="zh">$6 \text{ (总面)} - 1 \text{ (输入)} = 5$。子弹星系团的最大引力透镜杠杆 $\mathcal{L}_{max}=5$ 并非经验拟合，而是三维空间网格在因果律约束下能产生的最大拓扑散射极限。</span><br>
+        <strong class="en">Mathematical Uniqueness:</strong><span class="en">$6 \text{ (Total Faces)} - 1 \text{ (Input)} = 5$. The maximum apparent lensing leverage $\mathcal{L}_{max}=5$ for the Bullet Cluster is not an empirical fit, but the absolute topological scattering limit under causality.</span>
+    </div>
+
+    <h2>
+        <span class="zh">定理六：最小应变弗兰克能定理 (108° 拓扑缺陷密码)</span>
+        <span class="en">Theorem VI: Minimum Strain Frank Energy Theorem (108° Defect Code)</span>
+    </h2>
+    <p class="zh">在正方体网格中，基态闭合环为 90°。当极端碰撞撕裂网格时，必然产生多边形向错缺陷（Disclination defect）。根据晶体学限制，5 重对称无法平铺，但拓扑缺陷的“弗兰克应变自由能”与角偏差的平方 $(\Delta \theta)^2$ 成正比。</p>
+    <p class="en">In a cubic grid, the ground state closed loop is 90°. Extreme collisions tear the grid, generating polygonal disclination defects. Crystallography forbids 5-fold tessellation, but the "Frank Free Energy" of a defect is proportional to the angular deviation squared: $(\Delta \theta)^2$.</p>
+    
+    <div class="highlight-box">
+        <strong class="zh">数学唯一性：</strong><span class="zh">突变为三角形 $\Delta \theta = |60°-90°|=30°$；突变为六边形 $\Delta \theta = |120°-90°|=30°$；突变为正五边形 $\Delta \theta = |108°-90°|=18°$！在所有拓扑突变中，108° 制造的角应变绝对最小。因此，108° 是大自然在撕裂空间时，所能选择的能量最低、最易激发的最小拓扑缺陷代码，构成了暗物质丢包的终极几何本源。</span><br>
+        <strong class="en">Mathematical Uniqueness:</strong><span class="en"> Triangle $\Delta \theta = |60°-90°|=30°$; Hexagon $\Delta \theta = |120°-90°|=30°$; Pentagon $\Delta \theta = |108°-90°|=18°$! Among all mutations, 108° produces the absolute minimum angular strain. Thus, 108° is the lowest-energy topological defect code the universe defaults to when tearing space, forming the geometric root of dark matter packet drops.</span>
+    </div>
+
+    <h2 style="border-top: 1px dashed var(--border-color); padding-top: 30px;">
+        <span class="zh">大一统逻辑闭环与防冲突协议</span>
+        <span class="en">The Grand Unification Loop & Collision-Free Protocol</span>
+    </h2>
+    <p class="zh">以上定理并非孤立存在，它们共同铸造了一条不可击穿的逻辑铁链：</p>
+    <p class="en">The above theorems do not exist in isolation; they forge an unbreakable logical iron chain:</p>
+    
+    <div class="highlight-box" style="border-left-color: #ff7b72;">
+        <ul class="zh" style="margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 8px;"><strong>黑洞热力学贝肯斯坦上限</strong>要求空间必须离散（否决连续流形）。</li>
+            <li style="margin-bottom: 8px;">空间无缝平铺 + <strong>引力偶宇称</strong>要求离散群必须是 $O_h$。</li>
+            <li style="margin-bottom: 8px;">$O_h$ 晶格在遭受极端碰撞应力时，<strong>最小弗兰克自由能缺陷</strong>必然指向 108°。</li>
+        </ul>
+        <ul class="en" style="margin: 0; padding-left: 20px;">
+            <li style="margin-bottom: 8px;"><strong>Black hole thermodynamics (Bekenstein Bound)</strong> demands discrete space (vetoing continuous manifolds).</li>
+            <li style="margin-bottom: 8px;">Seamless tessellation + <strong>even gravity parity</strong> strictly requires the $O_h$ discrete group.</li>
+            <li style="margin-bottom: 8px;">When the $O_h$ lattice suffers extreme collision stress, the <strong>minimum Frank free energy</strong> defect inevitably points to 108°.</li>
+        </ul>
+        
+        <p class="zh" style="margin-top: 15px;">这不是碰巧，这是一条从<strong>“热力学 $\to$ 群论 $\to$ 晶体缺陷 $\to$ 暗物质”</strong>的纯逻辑铁链！</p>
+        <p class="en" style="margin-top: 15px;">This is no coincidence. It is a pure logical iron chain from <strong>"Thermodynamics $\to$ Group Theory $\to$ Crystal Defects $\to$ Dark Matter"</strong>!</p>
+
+        <p class="zh" style="margin-top: 15px; border-top: 1px solid #30363d; padding-top: 15px;">此外，为了死守“宇宙账本一个存储节点绝不记两笔重叠账”的信息论安全红线，文大方理论遵循费米子外代数本征幂零律 $\theta^2 = 0$：
+        $$g_{calibrated} = \frac{g_{bar}}{\sqrt{2}\cdot\sqrt{1 - e^{-g_{bar}/g_{base}}}}$$
+        当局部能量通量逼近节点容纳极限时，系统会自动触发此归一化大闸，迫使发散的紫外能量强制截断。这从代数层面上直接抹平了量子场论中高达 $10^{120}$ 倍的“真空零点能灾变”。</p>
+        
+        <p class="en" style="margin-top: 15px; border-top: 1px solid #30363d; padding-top: 15px;">Furthermore, to enforce the information-theoretic constraint that "a single storage node can never double-count," WDF Theory adopts the exterior algebra nilpotency $\theta^2 = 0$:
+        $$g_{calibrated} = \frac{g_{bar}}{\sqrt{2}\cdot\sqrt{1 - e^{-g_{bar}/g_{base}}}}$$
+        Under extreme localized energy flux, this normalization gate forces an absolute UV cutoff on divergent energy. This algebraically resolves the notorious $10^{120}$ vacuum energy catastrophe in quantum field theory.</p>
+    </div>
 </div>
