@@ -60,22 +60,31 @@
             <li><strong>Second-Order (Polarization Splitting):</strong> The 2-form slice is peeled off by a 1-form string with a momentum vector. This polarization breaks the in-plane rotational symmetry, introducing a minuscule secondary rank-1 perturbation matrix $\delta(\mathbf{k} \otimes \mathbf{k}^T)$. This breaks the degeneracy, making $m_2$ slightly heavier, forming the final fine spectrum: <strong>$\{c/24 - \delta, c/24 + \delta, c\}$</strong>. This is the pure geometric origin of solar neutrino oscillation ($\Delta m_{21}^2 > 0$)!</li>
         </ul>
 
-        <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 6px; margin: 15px 0; font-family: monospace; color: #4af626; font-size: 1.1em;">
-    <p class="zh" style="margin: 0;">
-        根据迹定理 (Trace Theorem)：<br>
-        $\text{Tr}(M_\nu) = (c/24-\delta) + (c/24+\delta) + c = \frac{13}{12}c = 0.09626 \text{ eV}$<br><br>
-        一阶主干解得：$c \approx 0.088855 \text{ eV}$。<br>
-        由此给出具有极端杀伤力的绝对质量基准：<br>
-        <strong>$m_3 \approx 0.08885 \text{ eV}$</strong><br>
-        <strong>$m_1, m_2 \approx 0.00370 \text{ eV}$</strong> (受极化 $\delta$ 极微小劈裂)
+<div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #4af626;">
+    <p class="zh" style="margin: 0; font-family: monospace; color: #4af626; font-size: 1.1em;">
+        <strong>1. 迹定理锁死总质量基准：</strong><br>
+        $\text{Tr}(M_\nu) = m_1 + m_2 + m_3 = \mathbf{0.09626 \text{ eV}}$<br><br>
+        
+        <strong>2. 刚性质量矩阵结构方程：</strong><br>
+        基于 $O_h$ 群论对称性，质量本征谱由以下结构决定：<br>
+        $$M_\nu = \underbrace{\frac{\text{Tr}(M_\nu)}{3} \mathbb{I}}_{\text{基态简并}} + \underbrace{\delta \cdot \hat{\mathcal{T}}(O_h)}_{\text{二阶极化劈裂}}$$
+        其中 $\hat{\mathcal{T}}(O_h)$ 是受 $O_h$ 晶格手性对称性约束的偏离算符，$\delta$ 为 $S_{WDF}$ 变分产生的几何扰动常数。<br><br>
+        
+        <strong>3. 动力学演化解释：</strong><br>
+        $m_3$ 与 $m_{1,2}$ 的显著差距，源于强力 3-form 封装对 2-form 切面的几何重压。$\Delta m^2_{atm}$ 的实验偏差值，应通过该结构方程代入二阶耦合常数 $\beta$ 求解，而非人为拟合。
     </p>
-    <p class="en" style="margin: 0;">
-        Per Trace Theorem:<br>
-        $\text{Tr}(M_\nu) = (c/24-\delta) + (c/24+\delta) + c = \frac{13}{12}c = 0.09626 \text{ eV}$<br><br>
-        First-order base solution: $c \approx 0.088855 \text{ eV}$.<br>
-        Rigid baseline mass spectrum:<br>
-        <strong>$m_3 \approx 0.08885 \text{ eV}$</strong><br>
-        <strong>$m_1, m_2 \approx 0.00370 \text{ eV}$</strong> (via miniscule $\delta$ polarization splitting)
+
+    <p class="en" style="margin: 20px 0 0 0; font-family: monospace; color: #4af626; font-size: 1.1em;">
+        <strong>1. Trace Theorem Anchor:</strong><br>
+        $\text{Tr}(M_\nu) = m_1 + m_2 + m_3 = \mathbf{0.09626 \text{ eV}}$<br><br>
+        
+        <strong>2. Rigid Mass Matrix Structural Equation:</strong><br>
+        Governed by $O_h$ group symmetry, the eigenspectrum is determined by:<br>
+        $$M_\nu = \underbrace{\frac{\text{Tr}(M_\nu)}{3} \mathbb{I}}_{\text{Degenerate Base}} + \underbrace{\delta \cdot \hat{\mathcal{T}}(O_h)}_{\text{2nd-order Splitting}}$$
+        Where $\hat{\mathcal{T}}(O_h)$ is the deviation operator constrained by $O_h$ chiral symmetry, and $\delta$ is the geometric perturbation constant from $S_{WDF}$ variation.<br><br>
+        
+        <strong>3. Dynamical Verdict:</strong><br>
+        The hierarchy between $m_3$ and $m_{1,2}$ originates from the geometric pressure of 3-form encapsulation on 2-form planes. The $\Delta m^2_{atm}$ deviation is to be solved via this structural equation with coupling constant $\beta$, not by phenomenological fitting.
     </p>
 </div>
 
