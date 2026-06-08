@@ -92,28 +92,35 @@
         <p class="en" style="font-weight: bold; color: var(--accent-color);">Rigid Verdict: Nature must be absolute Normal Hierarchy (NH). WDF yields the first zero-parameter exact neutrino mass baseline spectrum. JUNO will inevitably verify this!</p>
     </div>
 
-    <h2 style="color: #4af626; margin-top: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">
-        <span class="zh">三、 总质量 0.09626 eV：一阶微扰的唯一线性不变量映射</span>
-        <span class="en">III. Total Mass 0.09626 eV: Unique Linear Invariant Mapping of First-Order Perturbation</span>
+  <h2 style="color: #4af626; margin-top: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">
+        <span class="zh">三、 总质量 0.09626 eV：一阶微扰的绝对几何映射</span>
+        <span class="en">III. Total Mass 0.09626 eV: Absolute Geometric Mapping of First-Order Perturbation</span>
     </h2>
-    <p class="zh">为何瞬子压制因子 $48^{-4}$ 唯一映射质量矩阵的迹 $\text{Tr}(M_\nu)$，而不是行列式或单个本征值？</p>
-    <p class="en">Why does the instanton suppression factor $48^{-4}$ uniquely map to the trace of the mass matrix $\text{Tr}(M_\nu)$, and not the determinant or a single eigenvalue?</p>
 
     <div class="highlight-box" style="margin-top: 20px; border-left-color: #4af626;">
-        <ul class="zh" style="margin-bottom: 0;">
-            <li style="margin-bottom: 12px;"><strong>欧氏作用量即拓扑熵 ($S_{inst} = \ln W$)：</strong> 底层单节点 $O_h=48$ 态在四维时空做张量积展开，构型总数必然是 $W = 48^4$。概率压制标量严格为 $e^{-S_{inst}} = 48^{-4}$。</li>
-            <li><strong>有效作用量微扰的迹定理：</strong> 在量子场论中，瞬子隧穿生成的是有效拉格朗日量的一阶微扰（$\Delta \mathcal{L}_{eff} \propto e^{-S_{inst}} \bar{\nu} \nu$）。在线性代数中，约束一个多维算符（质量矩阵 $M_\nu$）的整体一阶线性标量，其唯一的全局线性几何不变量必须是矩阵的迹（Trace）。行列式是三次的非线性项。只有迹能代表一阶线性质量偏移之和。因此：$\text{Tr}(M_\nu) = m_1 + m_2 + m_3 = \sum m_\nu$。</li>
-        </ul>
-        <ul class="en" style="margin-bottom: 0; margin-top: 15px;">
-            <li style="margin-bottom: 12px;"><strong>Euclidean Action as Topological Entropy ($S_{inst} = \ln W$):</strong> The $O_h=48$ single-node states expand via tensor product in 4D yielding $W = 48^4$. The probability suppression scalar is strictly $e^{-S_{inst}} = 48^{-4}$.</li>
-            <li><strong>Trace Theorem of Effective Action Perturbation:</strong> In QFT, instanton tunneling generates a first-order perturbation to the effective Lagrangian. In linear algebra, a holistic first-order linear scalar constraining a multidimensional operator must uniquely map to its global linear geometric invariant: the Trace. Only the Trace represents the sum of first-order linear mass shifts. Hence: $\text{Tr}(M_\nu) = \sum m_\nu$.</li>
-        </ul>
+        <p class="zh" style="margin-top: 0;"><strong>【刚性推导链条：逻辑绝不跳步】</strong></p>
+        <p class="en" style="margin-top: 0;"><strong>[Rigid Derivation Chain: No Logical Jumps]</strong></p>
 
-        <div style="text-align: center; margin: 15px 0; font-size: 1.3em; color: #4af626; font-weight: bold;">
-            $\sum m_\nu \equiv m_e \times 48^{-4} \approx \mathbf{0.09626 \text{ eV}}$
+        <ol class="zh" style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>熵计算 (Entropy Calculation)：</strong> 根据吉本斯-霍金效应，欧氏瞬子作用量即为系统拓扑熵。底层 $O_h=48$ 态在 $D_M=4$ 维时空做张量积展开，构型总数 $W = O_h^{D_M} = 48^4$。作用量 $S_{inst} = \ln(W) = \ln(48^4)$。</li>
+            <li style="margin-bottom: 10px;"><strong>隧穿振幅 (Tunneling Amplitude)：</strong> 路径积分振幅 $Z = e^{-S_{inst}} = \exp(-\ln(48^4)) = 48^{-4}$。这是从纯几何真空隧穿出质量态的唯一概率标量。</li>
+            <li style="margin-bottom: 10px;"><strong>质量度量归一化 (Mass Normalization)：</strong> 依据“质量度量公理”，系统以电子基态 $m_e$ 为单位质量基准 ($m_e \equiv 1$)。瞬子隧穿过程将 1-form 能量转化为 3-form 质量态，其映射系数必须通过全局线性标量算符导出。</li>
+            <li><strong>迹定理 (Trace Theorem)：</strong> 在线性代数中，质量矩阵 $M_\nu$ 的全局不变量仅有迹 (Trace)。行列式与范数均为高阶耦合项（在 $S_{WDF}$ 的低能一阶变分下被湮灭）。因此，$\text{Tr}(M_\nu) = \sum m_\nu = m_e \times 48^{-4}$。</li>
+        </ol>
+
+        <ol class="en" style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Entropy Calculation:</strong> By Gibbons-Hawking effect, Euclidean instanton action equals topological entropy. $O_h=48$ states in $D_M=4$ manifold expand as $W = 48^4$. Action $S_{inst} = \ln(W) = \ln(48^4)$.</li>
+            <li style="margin-bottom: 10px;"><strong>Tunneling Amplitude:</strong> Path integral amplitude $Z = e^{-S_{inst}} = 48^{-4}$. This is the unique probability scalar for tunneling from geometric vacuum to mass state.</li>
+            <li style="margin-bottom: 10px;"><strong>Mass Normalization:</strong> Per "Axiom of Mass Measure," we define electron ground state $m_e$ as unit mass ($m_e \equiv 1$). The tunneling maps 1-form energy to 3-form mass state via a global linear scalar operator.</li>
+            <li><strong>Trace Theorem:</strong> In linear algebra, the only global invariant of mass matrix $M_\nu$ is the Trace. Determinants and norms are suppressed by $S_{WDF}$'s first-order variation. Hence: $\text{Tr}(M_\nu) = \sum m_\nu = m_e \times 48^{-4}$.</li>
+        </ol>
+
+        <div style="text-align: center; margin: 25px 0; font-size: 1.5em; color: #4af626; font-weight: bold; border: 1px solid #4af626; padding: 10px; border-radius: 5px;">
+            $\sum m_\nu = 511,000 \text{ eV} \times 48^{-4} \approx \mathbf{0.09626 \text{ eV}}$
         </div>
-        <p class="zh" style="margin-top: 10px;"><strong>生死检验：</strong> 中微子总质量被纯代数死死钉在 $0.09626 \text{ eV}$。当 KATRIN 实验精度逼近 0.1 eV 时，大自然将给出最终答复。</p>
-        <p class="en"><strong>Life-or-Death Test:</strong> The total mass is algebraically locked at $0.09626 \text{ eV}$. When the KATRIN experiment approaches 0.1 eV precision, nature will give the final answer.</p>
+
+        <p class="zh" style="margin-top: 10px;"><strong>刚性结论：</strong> $0.09626 \text{ eV}$ 并非拟合结果，而是由 $O_h$ 群阶数与 4 维时空测度决定的<strong>纯数论解</strong>。这是 WDF 理论对宇宙底层信息的绝对读出。</p>
+        <p class="en" style="margin-top: 10px;"><strong>Rigid Conclusion:</strong> $0.09626 \text{ eV}$ is not a fit, but a <strong>pure number-theoretic solution</strong> determined by $O_h$ group order and 4D spacetime measure. This is the absolute readout of cosmic info by WDF Theory.</p>
     </div>
 
     <h2 style="color: #d4af37; margin-top: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">
