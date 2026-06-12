@@ -107,6 +107,20 @@ For academic discussions, rigorous peer review, or collaboration inquiries, plea
 如果您有关于底层物理方程的探讨、学术盲审意见或合作意向，请直接联系作者：
 
 👤 **Author:** Andy(文大方)  
+
+## License
+
+This repository uses a dual-license model:
+
+- **Source Code (LaTeX, HTML, CSS, JavaScript, and all other software components)**:
+  Licensed under the [MIT License](LICENSE).
+  
+- **Theoretical Content, Documentation, and Web Pages (all physics formulas,
+  derivations, predictions, explanatory text, and the Wen Dafang Theory framework)**:
+  Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+  
+  This means you are free to share and adapt the theoretical content,
+  provided you give appropriate credit to **Wen Dafang**.
 📧 **Email:** smsaut3344@gmail.com  
 
 ## ⚖️ License
