@@ -5,8 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/1255705490.svg)](https://doi.org/10.5281/zenodo.20488837)
-[![PRD](https://img.shields.io/badge/PRD-Declined-lightgrey)]()
-[![MPLA](https://img.shields.io/badge/MPLA-Under%20Review-orange)]()
+[![PRD](https://img.shields.io/badge/PRD-Declined-lightgrey)](https://doi.org/10.5281/zenodo.20488837)
+[![MPLA](https://img.shields.io/badge/MPLA-Under%20Review-orange)](https://doi.org/10.5281/zenodo.20488837)
 
 > *"We do not need to invent invisible particles to balance the universe's ledger. The geometry of spacetime itself, when constrained by discrete topological invariants, enforces the balance."*
 
